@@ -37,6 +37,8 @@ public class Robot {
 		Robot demo = new Robot();
 		Scanner scanner = new Scanner(System.in);
 
+		System.out.println("Alice 已经启动，可以和他对话了");
+
 		String input;
 		while ((input = scanner.nextLine()) != null) {
 			System.out.println("you say>" + input);
