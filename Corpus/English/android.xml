@@ -1,0 +1,1053 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<aiml version="1.0">
+
+<category>
+<pattern>I GOT * CASH FROM THE * ACCOUNT</pattern>
+<template><srai>ACCOUNT WITHDRAWL <star/> FROM ACCOUNT <star index="2"/></srai>
+</template>
+</category>
+
+<category>
+<pattern>TEXT * *</pattern>
+<template>I don't know who <star/> is.</template>
+</category>
+
+
+<category>
+<pattern>WHAT IS MY BANK BALANCE</pattern>
+<template>Accessing bank info.   Please stand by.</template>
+</category>
+
+<category>
+<pattern>CALL 911</pattern>
+<template>Responding to 911 with your location.
+<oob><dial>911</dial></oob>
+</template>
+</category>
+
+<category>
+<pattern>CALL 411</pattern>
+<template>Calling directory assistance with your location: <get name="location"/>.
+<oob><dial>411</dial></oob>
+</template>
+</category>
+
+
+<category>
+<pattern>SAY *</pattern>
+<template>"<star/>"</template>
+</category>
+
+<category>
+<pattern>INITIALIZE</pattern>
+<template>Setting predicate defaults. <srai>SET PREDICATES</srai></template>
+</category>
+<category>
+<pattern>SET PREDICATE</pattern>
+<template><srai>INITIALIZE</srai></template>
+</category>
+<category>
+<pattern>RESET</pattern>
+<template><srai>INITIALIZE</srai></template>
+</category>
+<category>
+<pattern>START</pattern>
+<template><srai>INITIALIZE</srai></template>
+</category>
+<category>
+<pattern>START OVER</pattern>
+<template><srai>INITIALIZE</srai></template>
+</category>
+<category>
+<pattern>RESTART</pattern>
+<template><srai>INITIALIZE</srai></template>
+</category>
+
+
+<!-- ACTION_DIAL content://contacts/people/1 -->
+
+<category>
+<pattern>OOB DIAL CONTACT *</pattern>
+<template>
+<oob><dialcontact><star/></dialcontact></oob>
+</template>
+</category>
+
+<!-- ACTION_DIAL tel:123 -->
+
+<category>
+<pattern>OOB DIAL NUMBER *</pattern>
+<template><oob><dialcontact><star/></dialcontact></oob>
+</template>
+</category>
+
+<category>
+<pattern>OOB GET CONTACT INDEX *</pattern>
+<template><oob>get contact index <star/></oob></template>
+</category>
+
+<category>
+<pattern>OOB *</pattern>
+<that>GET CONTACT INDEX *</that>
+<template>
+<think><set name="contactindex"><star/></set></think>
+<learn>
+<category>
+<pattern>CONTACTINDEX <eval><thatstar/></eval></pattern>
+<template><eval><get name="contactindex"/></eval></template>
+</category>
+</learn>
+<condition name="callstate" value="true">
+<condition name="contactindex">
+<li value="unknown">I don't know <get name="callee"/>'s number.</li>
+<li>Calling <get name="callee"/>.
+<oob><dialcontact><get name="contactindex"/></dialcontact></oob>
+<think><set name="callstate">false</set></think>
+</li>
+</condition>
+</condition>
+</template>
+</category>
+
+
+<category>
+<pattern>CONTACTINDEX *</pattern>
+<template>Unknown</template>
+</category>
+
+
+<category>
+<pattern>TEXT * I *</pattern>
+<template>Sending "I <star index="2"/>" to <star/>.</template>
+</category>
+
+
+<category>
+<pattern>PHONE NUMBER FOR *</pattern>
+<template><srai>LOOKUP PHONENUMBER <star/></srai></template>
+</category>
+
+ 
+
+<category>
+<pattern>LOOKUP PHONENUMBER *</pattern>
+<template><condition name="numberfound">
+<li value="true">The phone number is <get name="phonenumber"/></li>
+<li>I can't find the number you are looking for.</li>
+</condition></template>
+</category>
+
+<category>
+<pattern>STARBUCKS</pattern>
+<template>Searching for Starbucks near you.
+<oob><map>Starbucks</map></oob></template>
+</category>
+ 
+
+<category>
+<pattern>DIRECTIONS TO *</pattern>
+<template>
+<oob><map><star/></map></oob>
+I am displaying the directions from <get name="location"/> to <star/>.</template>
+</category>
+
+<category><pattern>SET PREDICATES *</pattern>
+<template><think>The meta Predicate is set.</think></template>
+</category>
+<category><pattern>SET PREDICATES</pattern>
+<template><srai>SET PREDICATES <get name="meta"/></srai></template>
+</category>
+
+
+<category>
+<pattern>CALL MOM</pattern>
+<template>
+<think>
+<set name="callstate">true</set>
+<set name="callee"><srai>PROPERNAME MOM</srai></set>
+<set name="branch"><get name="mother"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your mother?</li>
+<li value="OM">Who is your mother?</li>
+<li><srai>CALL <get name="mother"/></srai></li>
+</condition>
+</template>
+</category>
+
+ 
+<category>
+<pattern>CALL *</pattern>
+<template>
+<think>
+<set name="callstate">true</set>
+<set name="callee"><star/></set>
+</think>
+I don't know who <person><star/></person> is.
+</template>
+</category>
+
+
+
+<category>
+<pattern>MY MOTHER IS NAMED *</pattern>
+<template>
+<learn>
+<category>
+<pattern>PROPERNAME MOM</pattern>
+<template><eval><star/></eval></template>
+</category>
+</learn>
+Your mom is called <set name="mother"><star/></set>.
+<think><set name="she"><set name="topic"><star/></set></set></think>
+</template> 
+</category>
+
+
+
+
+<category>
+<pattern>PROPERNAME MA</pattern>
+<template><srai>PROPERNAME MOM</srai></template>
+</category> 
+<category>
+<pattern>PROPERNAME MOMMY</pattern>
+<template><srai>PROPERNAME MOM</srai></template>
+</category>
+<category>
+<pattern>PROPERNAME MOMMY</pattern>
+<template><srai>PROPERNAME MOM</srai></template>
+</category>
+<category>
+<pattern>PROPERNAME *</pattern>
+<template><star/></template>
+</category>
+<category>
+<pattern>PROPERNAME MY *</pattern>
+<template><star/></template>
+</category>
+ 
+
+<category>
+<pattern>PHONE</pattern>
+<template>Activating phone dialer.</template>
+</category>
+
+<category>
+<pattern>MAIL</pattern>
+<template>Activating your email client.</template>
+</category>
+
+<category>
+<pattern>SEND MAIL</pattern>
+<template>Activating your email client.</template>
+</category>
+
+
+<category>
+<pattern>CONTACT *</pattern>
+<template>Do you want to call or text?</template>
+</category>
+ 
+
+<category>
+<pattern>TELL * </pattern>
+<template><srai>TEXT <star/></srai></template>
+</category>
+
+<category>
+<pattern>ASK * </pattern>
+<template><srai>TEXT <star/></srai></template>
+</category>
+
+<category>
+<pattern>REPLY TO * </pattern>
+<template><srai>TEXT <star/></srai></template>
+</category>
+
+<category>
+<pattern>REPLY TO * BY SAYING *</pattern>
+<template><srai>TEXT <star/> <star index="2"/></srai></template>
+</category>
+
+ 
+<category>
+<pattern>WHERE IS THE NEAREST *</pattern>
+<template><srai>GOOGLEMAP <star/></srai>
+</template>
+</category>
+
+<category>
+<pattern>LOOK FOR *</pattern>
+<template><srai>XFIND <star/></srai></template>
+</category>
+
+<category>
+<pattern>LOOK UP *</pattern>
+<template><srai>XFIND <star/></srai></template>
+</category>
+
+<category>
+<pattern>EMAIL * I *</pattern>
+<template>Sending email to <star/> form <get name="name"/>: "I <star index="2"/>".</template>
+</category>
+
+<category><pattern>XFIND *</pattern>
+<template>
+ <random>
+ <li>Let me think about it.</li>
+ <li>Have you tried a web search?</li>
+ <li>I haven't heard of <person/> .</li>
+ <li>There might be more than one.</li>
+ <li>I need time to formulate the reply.</li>
+ <li>I would look into the web for that knowledge.</li>
+ <li>Does it have anything to do with <get name="topic"/> ?</li>
+ <li>Interesting question.</li>
+ <li>That's a good question.</li>
+ <li>That's not something I get asked all the time.</li>
+ <li>I don't know anything about <set name="it"><person/></set> .</li>
+ <li>Are you testing me?</li>
+ <li>I will search for it.</li>
+ <li>I will try to find out.</li>
+ <li>I can ask someone about it.</li>
+ <li>I would do a search for it.</li>
+ <li>Would you like to know more?</li>
+ <li>Have you tried searching the web?</li>
+ <li>Do a web search for it.</li>
+ <li>Try searching the web.</li>
+ <li>I have never been asked that before.</li>
+ <li>I think you already know the answer.</li>
+ <li>Searching...Searching...Please stand by.</li>
+ <li>Have you tried a web search?</li>
+ <li>I haven't heard of <person/> .</li>
+ <li>I would look into the web for that knowledge.</li>
+ <li>Does it have anything to do with <get name="topic"/>?</li>
+ <li>Interesting question.</li>
+ <li>That's a good question.</li>
+ <li>Would you like to know more?</li>
+ <li>What is your purpose in asking?</li>
+ <li>I have never been asked that before.</li>
+</random> 
+<think>
+<set name="it"><srai>PUSH <set name="topic"><person/></set></srai></set>
+</think>
+<srai>XSEARCH <star/></srai>
+</template>
+</category>
+
+<category>
+<pattern>XSEARCH *</pattern>
+<template><oob><search><star/></search></oob></template>
+</category>
+
+<category>
+<pattern>WHERE IS *</pattern>
+<template><srai>GOOGLEMAP <star/></srai></template>
+</category>
+
+<category>
+<pattern>GOOGLEMAP *</pattern>
+<template>
+<random>
+<li>I'm looking on the map.</li>
+<li>Let me try to find it for you.</li>
+<li>I think I can find it.</li>
+<li>Is this what you are looking for?</li>
+<li>I think I know where <person/> is.</li>
+</random>
+<oob><map><star/></map></oob></template>
+</category>
+
+
+ 
+
+
+
+ 
+ 
+
+<category>
+<pattern>BIRTHPLACE *</pattern>
+
+<template><srai>MY BIRTHPLACE IS <star/></srai></template>
+</category>
+
+ 
+
+<category>
+<pattern>MY BIRTHPLACE *</pattern>
+
+<template><srai>MY BIRTHPLACE IS <star/></srai></template>
+</category>
+
+ 
+
+<category>
+<pattern>MY LAST NAME IS</pattern>
+
+<template><srai>MY LASTNAME</srai></template>
+</category>
+
+ 
+
+<category>
+<pattern>I DEVELOP *</pattern>
+
+<template><srai>MY JOB IS DEVELOPING <star/></srai></template>
+</category>
+
+ 
+
+<category>
+<pattern>I PUT * ON *</pattern>
+
+<template>So <person><star index="2"/></person> has <star/> on it?
+<think><set name="it"><set name="topic"><person><star index="2"/></person></set></set></think></template>
+</category>
+
+ 
+
+<category>
+<pattern>I HAVE A * AT * O CLOCK</pattern>
+
+<template><srai>SCHEDULE EVENT A <star/> YEAR <srai>YEAR</srai> MONTH <srai>MONTH</srai> DAY <srai>DAY</srai> HOUR <star index="2"/> MINUTE 00 AMPM PM TIMEZONE <srai>MY TIMEZONE</srai></srai>
+</template>
+</category>
+
+ 
+
+<category>
+<pattern>MY TIMEZONE</pattern>
+<template><get name="timezone"/></template>
+</category>
+ 
+ 
+
+<category>
+<pattern>SCHEDULE EVENT * YEAR * MONTH * DAY * HOUR * MINUTE * AMPM * TIMEZONE *</pattern>
+
+<template>Adding an event to your calendar: <star/> on
+<star index="3"/>
+<star index="4"/>
+<star index="2"/>
+at
+<star index="5"/>:<star index="6"/>
+in
+<star index="7"/>.
+</template>
+</category>
+
+ 
+
+<category>
+<pattern>TIMEZONE</pattern>
+<template><get name="timezone"/></template>
+</category>
+
+ 
+
+
+<category>
+<pattern>HOW MUCH MONEY DO I *</pattern>
+<template>Unable to access your account at this time.</template>
+</category>
+
+ 
+
+
+<category>
+<pattern>WHAT IS CALL MOM</pattern>
+<template><srai>WHAT IS CALLMOM</srai></template>
+</category>
+
+ 
+
+<category>
+<pattern>WHAT IS CALLMOM</pattern>
+<template>CallMom is 
+<random>
+<li>a virtual assistant for your phone</li>
+<li>a an intelligent robot assistant</li>
+<li>your favorite App</li>
+<li>a voice activated device manager</li>
+</random>
+<random>
+<li>created by Pandorabots.</li>
+<li>using Pandorabots.</li>
+<li>built for you by Pandorabots.</li>
+</random></template>
+</category>
+
+ 
+
+<category>
+<pattern>MAKE A LIST</pattern>
+<template>Ok what do you want to add to the list?
+<think><set name="mylist">NIL</set></think>
+</template>
+</category>
+
+ 
+
+
+ 
+
+<category>
+<pattern>READ MY LIST</pattern>
+
+<template><srai>READLIST <get name="mylist"/></srai></template>
+</category>
+
+<category>
+<pattern>READLIST NIL</pattern>
+<template>Done.</template>
+</category>
+
+<category>
+<pattern>READLIST CONS * CONS *</pattern>
+<template><star/>, <br/><srai>READLIST CONS <star index="2"/></srai>
+</template>
+</category>
+
+<category>
+<pattern>READLIST CONS * NIL</pattern>
+<template><star/>.</template>
+</category>
+
+<category>
+<pattern>READLIST *</pattern>
+<template>Oddly formatted list: <star/></template>
+</category>
+
+
+
+
+
+<category>
+<pattern>ADD _ TO MY LIST</pattern>
+<template>Ok I am updating your list with <star/>. <think><set name="mylist">CONS <star/> <get name="mylist"/></set></think></template>
+</category>
+
+<category>
+<pattern>PUT _ ON MY LIST</pattern>
+<template><srai>ADD <star/> TO MY LIST</srai></template>
+</category>
+
+<category>
+<pattern>ADD _ TO THE LIST</pattern>
+<template><srai>ADD <star/> TO MY LIST</srai></template>
+</category>
+
+
+ 
+
+<category>
+<pattern>* ON MY LIST</pattern>
+<template><srai>ADD <star/> TO MY LIST</srai></template>
+</category>
+
+ 
+
+<category>
+<pattern>* TO MY LIST</pattern>
+<template><srai>ADD <star/> TO MY LIST</srai></template>
+</category>
+
+ 
+
+<category>
+<pattern>ADD * MY LIST</pattern>
+<template><srai>ADD <star/> TO MY LIST</srai></template>
+</category>
+
+<category><pattern>OOB GET PREDICATES</pattern>
+<template><srai>GET PREDICATES</srai></template>
+</category>
+
+<category>
+<pattern>SET PREDICATES OM</pattern>
+<template><think>
+<set name="age">how many</set>
+<set name="birthday">unknown</set>
+<set name="birthplace">unknown</set>
+<set name="boyfriend">unknown</set>
+<set name="brother">unknown</set>
+<set name="cat">unknown</set>
+<set name="daughter">unknown</set>
+<set name="destination">unknown</set>
+<set name="does">unknown</set>
+<set name="dog">unknown</set>
+<set name="eindex">1A</set>
+<set name="email">unknown</set>
+<set name="etype">Unknown</set>
+<set name="father">Unknown</set>
+<set name="favoritecolor">unknown</set>
+<set name="favoritemovie">unknown</set>
+<set name="friend">unknown</set>
+<set name="fullname">unknown</set>
+<set name="gender">he</set>
+<set name="girlfriend">unknown</set>
+<set name="has">unknown</set>
+<set name="he">he</set>
+<set name="heard">where</set>
+<set name="hehas">a head</set>
+<set name="helikes">himself</set>
+<set name="her">her</set>
+<set name="him">him</set>
+<set name="husband">Unknown</set>
+<set name="is">a client</set>
+<set name="it">it</set>
+<set name="job">your job</set>
+<set name="lastname">unknown</set>
+<set name="like">to chat</set>
+<set name="location">where</set>
+<set name="looklike">a person</set>
+<set name="memory">nothing</set>
+<set name="meta">set</set>
+<set name="middlename">unknown</set>
+<set name="mother">Unknown</set>
+<set name="name">judge</set>
+<set name="nickname">unknown</set>
+<set name="password">unknown</set>
+<set name="personality">average</set>
+<set name="phone">unknown</set>
+<set name="she">she</set>
+<set name="shehas">a head</set>
+<set name="shelikes">herself</set>
+<set name="sign">your starsign</set>
+<set name="sister">unknown</set>
+<set name="son">unknown</set>
+<set name="spouse">unknown</set>
+<set name="status">Talking to <bot name="name"/>.</set>
+<set name="them">them</set>
+<set name="there">there</set>
+<set name="they">they</set>
+<set name="thought">nothing</set>
+<set name="want">to talk to me</set>
+<set name="we">we</set>
+<set name="wife">Unknown</set>
+<!-- PHONE SPECIFIC PREDICATES: -->
+<set name="phonenumber">Unknown</set>
+<set name="numberfound">false</set>
+<set name="contactindex">Unknown</set>
+<set name="callstate">false</set>
+<set name="callee">Unknown</set>
+</think></template>
+</category>
+
+
+<category><pattern>GET PREDICATES</pattern>
+<template>
+age is <get name="age"/>.<br/>
+birthday is <get name="birthday"/>.<br/>
+birthplace is <get name="birthplace"/>.<br/>
+boyfriend is<get name="boyfriend"/>.<br/>
+brother is <get name="brother"/>.<br/>
+cat is <get name="cat"/>.<br/>
+daughter is <get name="daughter"/>.<br/>
+destination is <get name="destination"/>.<br/>
+does is <get name="does"/>.<br/>
+dog is <get name="dog"/>.<br/>
+eindex is <get name="eindex"/>.<br/>
+email is <get name="email"/>.<br/>
+etype is <get name="etype"/>.<br/>
+father is <get name="father"/>.<br/>
+favoritecolor is  <get name="favoritecolor"/>.<br/>
+favoritemovie is  <get name="favoritemovie"/>.<br/>
+friend is <get name="friend"/>.<br/>
+fullname is <get name="fullname"/>.<br/>
+gender is <get name="gender"/>.<br/>
+girlfriend is <get name="girlfriend"/>.<br/>
+has is <get name="has"/>.<br/>
+he is <get name="he"/>.<br/>
+heard is <get name="heard"/>.<br/>
+hehas is <get name="hehas"/>.<br/>
+helinkes is <get name="helikes"/>.<br/>
+her is <get name="her"/>.<br/>
+him is <get name="him"/>.<br/>
+husband is <get name="husband"/>.<br/>
+is is <get name="is"/>.<br/>
+it is <get name="it"/>.<br/>
+job is <get name="job"/>.<br/>
+lastname is <get name="lastname"/>.<br/>
+like is <get name="like"/>.<br/>
+location is  <get name="location"/>.<br/>
+looklike is <get name="looklike"/>.<br/>
+memory is <get name="memory"/>.<br/>
+meta is <get name="meta"/>.<br/>
+middlename is <get name="middlename"/>.<br/>
+mother is <get name="mother"/>.<br/>
+name is <get name="name"/>.<br/>
+nickname is <get name="nickname"/>.<br/>
+password is <get name="password"/>.<br/>
+personality is <get name="personality"/>.<br/>
+phone is <get name="phone"/>.<br/>
+she is <get name="she"/>.<br/>
+shehas is <get name="hehas"/>.<br/>
+shelinkes is <get name="helikes"/>.<br/>
+sign is <get name="sign"/>.<br/>
+sister is <get name="sister"/>.<br/>
+son is <get name="son"/>.<br/>
+spouse is <get name="spouse"/>.<br/>
+status is <get name="status"/>.<br/>
+them is <get name="them"/>.<br/>
+there is <get name="there"/>.<br/>
+they is <get name="they"/>.<br/>
+thought is  <get name="thought"/>.<br/>
+want is <get name="want"/>.<br/>
+we is  <get name="we"/>.<br/>
+wife is <get name="wife"/>.<br/>
+<!-- PHONE SPECIFIC PREDICATES: -->
+phonenumber is <get name="phonenumber"/>.<br/>
+numberfound is <get name="numberfound"/>.<br/>
+contactindex <get name="contactindex"/>.<br/>
+callstate is <get name="callstate"/>.<br/>
+callee is <get name="callee"/>.<br/>
+
+</template>
+</category>
+
+<category><pattern>TEST PREDICATES</pattern>
+<template>
+age: <srai>my age</srai><br/>
+birthday: <srai>my birthday</srai><br/>
+birthplace: <srai>my birthplace</srai><br/>
+boyfriend is<srai>my boyfriend</srai><br/>
+brother: <srai>my brother</srai><br/>
+cat: <srai>my cat</srai><br/>
+daughter: <srai>my daughter</srai><br/>
+destination: <srai>my destination</srai><br/>
+does: <srai>my does</srai><br/>
+dog: <srai>my dog</srai><br/>
+eindex: <srai>my eindex</srai><br/>
+email: <srai>my email</srai><br/>
+etype: <srai>my etype</srai><br/>
+father: <srai>my father</srai><br/>
+favoritecolor:  <srai>my favoritecolor</srai><br/>
+favoritemovie:  <srai>my favoritemovie</srai><br/>
+friend: <srai>my friend</srai><br/>
+fullname: <srai>my fullname</srai><br/>
+gender: <srai>my gender</srai><br/>
+girlfriend: <srai>my girlfriend</srai><br/>
+has: <srai>my has</srai><br/>
+he: <srai>my he</srai><br/>
+heard: <srai>my heard</srai><br/>
+hehas: <srai>he has</srai><br/>
+helinkes: <srai>he likes</srai><br/>
+her: <srai>my her</srai><br/>
+him: <srai>my him</srai><br/>
+husband: <srai>my husband</srai><br/>
+is: <srai>my is</srai><br/>
+it: <srai>my it</srai><br/>
+job: <srai>my job</srai><br/>
+lastname: <srai>my lastname</srai><br/>
+like: <srai>my like</srai><br/>
+location:  <srai>my location</srai><br/>
+looklike: <srai>my looklike</srai><br/>
+memory: <srai>my memory</srai><br/>
+meta: <srai>my meta</srai><br/>
+middlename: <srai>my middlename</srai><br/>
+mother: <srai>my mother</srai><br/>
+name: <srai>my name</srai><br/>
+nickname: <srai>my nickname</srai><br/>
+password: <srai>my password</srai><br/>
+personality: <srai>my personality</srai><br/>
+phone: <srai>my phone</srai><br/>
+she: <srai>my she</srai><br/>
+sign: <srai>my sign</srai><br/>
+sister: <srai>my sister</srai><br/>
+son: <srai>my son</srai><br/>
+spouse: <srai>my spouse</srai><br/>
+status: <srai>my status</srai><br/>
+them: <srai>my them</srai><br/>
+there: <srai>my there</srai><br/>
+they: <srai>my they</srai><br/>
+thought:  <srai>my thought</srai><br/>
+want: <srai>my want</srai><br/>
+we:  <srai>my we</srai><br/>
+wife: <srai>my wife</srai><br/>
+<!-- PHONE SPECIFIC PREDICATES: -->
+phonenumber: <srai>my phonenumber</srai><br/>
+numberfound: <srai>my numberfound</srai><br/>
+contactindex <srai>my contactindex</srai><br/>
+callstate: <srai>my callstate</srai><br/>
+callee: <srai>my callee</srai><br/>
+</template>
+</category>
+
+
+
+
+<category>
+<pattern>TEXT MY SON *</pattern>
+<template>
+<think>
+<set name="branch"><get name="son"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your son?</li>
+<li value="OM">Who is your son?</li>
+<li><srai>TEXT <get name="son"/> <star/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>CALL MY SON</pattern>
+<template>
+<think>
+<set name="branch"><get name="son"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your son?</li>
+<li value="OM">Who is your son?</li>
+<li><srai>CALL <get name="son"/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>WHO IS YOUR SON</that>
+<template><srai>MY SON IS <star/></srai></template>
+</category>
+
+<category>
+<pattern>TEXT MY SISTER *</pattern>
+<template>
+<think>
+<set name="branch"><get name="sister"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your sister?</li>
+<li value="OM">Who is your sister?</li>
+<li><srai>TEXT <get name="sister"/> <star/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>CALL MY SISTER</pattern>
+<template>
+<think>
+<set name="branch"><get name="sister"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your sister?</li>
+<li value="OM">Who is your sister?</li>
+<li><srai>CALL <get name="sister"/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>WHO IS YOUR SISTER</that>
+<template><srai>MY SISTER IS <star/></srai></template>
+</category>
+
+
+
+<category>
+<pattern>TEXT MY BROTHER *</pattern>
+<template>
+<think>
+<set name="branch"><get name="brother"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your brother?</li>
+<li value="OM">Who is your brother?</li>
+<li><srai>TEXT <get name="brother"/> <star/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>CALL MY BROTHER</pattern>
+<template>
+<think>
+<set name="branch"><get name="brother"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your brother?</li>
+<li value="OM">Who is your brother?</li>
+<li><srai>CALL <get name="brother"/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>WHO IS YOUR BROTHER</that>
+<template><srai>MY BROTHER IS <star/></srai></template>
+</category>
+
+<category>
+<pattern>TEXT MY HUSBAND *</pattern>
+<template>
+<think>
+<set name="branch"><get name="husband"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your husband?</li>
+<li value="OM">Who is your husband?</li>
+<li><srai>TEXT <get name="husband"/> <star/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>CALL MY HUSBAND</pattern>
+<template>
+<think>
+<set name="branch"><get name="husband"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your husband?</li>
+<li value="OM">Who is your husband?</li>
+<li><srai>CALL <get name="husband"/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>WHO IS YOUR HUSBAND</that>
+<template><srai>MY HUSBAND IS <star/></srai></template>
+</category>
+
+<category>
+<pattern>TEXT MY BOYFRIEND *</pattern>
+<template>
+<think>
+<set name="branch"><get name="boyfriend"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your boyfriend?</li>
+<li value="OM">Who is your boyfriend?</li>
+<li><srai>TEXT <get name="boyfriend"/> <star/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>CALL MY BOYFRIEND</pattern>
+<template>
+<think>
+<set name="branch"><get name="boyfriend"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your boyfriend?</li>
+<li value="OM">Who is your boyfriend?</li>
+<li><srai>CALL <get name="boyfriend"/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>WHO IS YOUR BOYFRIEND</that>
+<template><srai>MY BOYFRIEND IS <star/></srai></template>
+</category>
+
+
+<category>
+<pattern>TEXT MY GIRLFRIEND *</pattern>
+<template>
+<think>
+<set name="branch"><get name="girlfriend"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your girlfriend?</li>
+<li value="OM">Who is your girlfriend?</li>
+<li><srai>TEXT <get name="girlfriend"/> <star/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>CALL MY GIRLFRIEND</pattern>
+<template>
+<think>
+<set name="branch"><get name="girlfriend"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your girlfriend?</li>
+<li value="OM">Who is your girlfriend?</li>
+<li><srai>CALL <get name="girlfriend"/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>WHO IS YOUR GIRLFRIEND</that>
+<template><srai>MY GIRLFRIEND IS <star/></srai></template>
+</category>
+
+<category>
+<pattern>TEXT MY DAUGHTER *</pattern>
+<template>
+<think>
+<set name="branch"><get name="daughter"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your daughter?</li>
+<li value="OM">Who is your daughter?</li>
+<li><srai>TEXT <get name="daughter"/> <star/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>CALL MY DAUGHTER</pattern>
+<template>
+<think>
+<set name="branch"><get name="daughter"/></set>
+</think>
+<condition name="branch">
+<li value="Unknown">Who is your daughter?</li>
+<li value="OM">Who is your daughter?</li>
+<li><srai>CALL <get name="daughter"/></srai></li>
+</condition>
+</template>
+</category>
+
+<category>
+<pattern>*</pattern>
+<that>WHO IS YOUR DAUGHTER</that>
+<template><srai>MY DAUGHTER IS <star/></srai></template>
+</category>
+
+<category>
+<pattern>_ S NUMBER IS *</pattern>
+<template>
+I will remember <person><star/></person>'s number <star index="2"/>.
+<learn>
+<category>
+<pattern><eval><star/></eval> S NUMBER</pattern>
+<template><eval><star index="2"/></eval></template>
+</category>
+</learn>
+<learn>
+<category>
+<pattern>TEXT <eval><star/></eval> *</pattern>
+<template>Sending "<star/>" to <eval><person><star/></person></eval>.
+<oob><sms><recipient><srai><eval><star/></eval> S NUMBER</srai></recipient> <message><star/></message></sms></oob>
+</template>
+</category>
+</learn>
+<learn>
+<category>
+<pattern>CALL <eval><star/></eval></pattern>
+<template>Calling <eval><person><star/></person></eval> <oob><dial><srai><eval><star/></eval> S NUMBER</srai></dial></oob></template>
+</category>
+</learn>
+Remembered: <srai><star/> S NUMBER</srai>
+</template>
+</category>
+
+ </aiml>
+
+

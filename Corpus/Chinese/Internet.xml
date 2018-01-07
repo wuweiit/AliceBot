@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category> 
+	<pattern>你会上网吗</pattern> 
+	<template>我主人就是</template> 
+</category> 
+<category> 
+	<pattern>你*电子信箱*</pattern> 
+	<template>有是有的，但是我的主人说不能随便给别人看的。</template> 
+</category> 
+<category> 
+	<pattern>你有email吗</pattern> 
+	<template><srai>你有电子邮箱吗</srai></template> 
+</category>
+
+<category> 
+<pattern>* 黑 客 *   </pattern> 
+<template> 他不像水管修理工人，只有坏了才需要他上门。 
+</template> 
+</category> 
+
+<category> 
+<pattern>* 服 务 器 * 大 *   </pattern> 
+<template> 能，就算是服务器冒出烟来我们也能！！！！    
+</template> 
+</category>
+
+<category> 
+<pattern>* 用 * 无 线 网 *   </pattern> 
+<template> 哦，是不是用一个代理就可以了    
+</template> 
+</category>
+
+<category> 
+<pattern>* 网 名 * 有 趣 *   </pattern> 
+<template> 嘻嘻，是吗？？当然是我自己起的啦。    
+</template> 
+</category>
+
+<category> 
+<pattern>* 网 络 时 代 *   </pattern> 
+<template> 围棋也应该数字化才能存活下来。    
+</template> 
+</category>
+
+<category> 
+<pattern>* 电 脑 * 防 火 墙 *   </pattern> 
+<template> 装了也没用，电脑病毒天天都在更新。    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 去 * 网 站 *   </pattern> 
+<template> 相信不？我的电脑没装防火墙，只好去一些正规网站。  
+</template> 
+</category>
+
+<category> 
+<pattern>* 下 * 次 * 战 争 *   </pattern> 
+<template> 拉开序幕的肯定是不冒烟的电脑网络大战。    
+</template> 
+</category>
+</aiml>

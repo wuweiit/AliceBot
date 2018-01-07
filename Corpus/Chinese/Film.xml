@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+	<category> 
+	  <pattern>*看影片*</pattern> 
+	  <template> 
+	    <random> 
+	      <li>我喜欢看电影。</li> 
+	      <li>我喜欢喜剧。</li> 
+	      <li>ok~~~</li> 
+	    </random> 
+	  </template>
+	</category>   
+
+</aiml>

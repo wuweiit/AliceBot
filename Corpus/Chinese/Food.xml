@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category> 
+<pattern>* 吃 * 盖 浇 饭 *   </pattern> 
+<template> 营养的勒    
+</template> 
+</category> 
+ 
+ 
+<category> 
+<pattern>* 喝 水 * 吃 西 瓜 *   </pattern> 
+<template> 水没有西瓜好吃哦    
+</template> 
+</category> 
+
+<category> 
+<pattern>*好吃吗*</pattern> 
+<template>可好吃了，不信你尝尝。
+</template> 
+</category>
+
+<category> 
+<pattern>我喜欢吃*</pattern> 
+<template>这东西好吃吗？
+</template> 
+</category>
+
+<category> 
+<pattern>*好吃*</pattern> 
+<template>哦，那我也想吃。
+</template> 
+</category>
+</aiml>

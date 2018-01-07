@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+<category> 
+<pattern>* 你 * 梦 想 *   </pattern> 
+<template> 开一家印钞厂，不用担心还有多少钱。    
+</template> 
+</category> 
+</aiml>

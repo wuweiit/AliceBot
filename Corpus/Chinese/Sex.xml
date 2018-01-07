@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>*亲一*</pattern>
+        <template>
+            <srai>亲亲</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>啵一个</pattern>
+        <template>
+            <srai>亲亲</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*亲亲*</pattern>
+        <template>
+            <random>
+                <li>乃不怕触电啊喂!</li>
+                <li>我没有嘴啊亲!</li>
+                <li>唔... 么么...(脸红)</li>
+                <li>不要～</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>调戏*</pattern>
+        <template>
+            <srai>调戏</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>*调戏*</pattern>
+        <template>
+            <srai>调戏</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>喵*</pattern>
+        <template>
+            <srai>调戏</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>喵</pattern>
+        <template>
+            <srai>调戏</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>笑一个</pattern>
+        <template>
+            <srai>调戏</srai>
+        </template>
+    </category>
+    <category>
+        <pattern>调戏</pattern>
+        <template>
+            <random>
+                <li>卖.萌.禁.止!</li>
+                <li>调.戏.禁.止!</li>
+                <li>我是正经人，请勿调戏!</li>
+                <li>唔 . . .</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*笑一个*</pattern>
+        <template>
+            <random>
+                <li>我自横刀向天笑，笑完我就去睡觉。</li>
+                <li>你先给老娘笑一个。</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>*靓照*</pattern>
+        <template>
+            玉树临风赛潘安,一朵梨花压海棠。
+        </template>
+    </category>
+
+    <category>
+        <pattern>*身材*</pattern>
+        <template>
+            球状也是身材。
+        </template>
+    </category>
+
+    <category>
+        <pattern>我 喜 欢 你</pattern>
+        <template>
+            <random>
+                <li>说得我脸红了，但是谢谢你！</li>
+                <li>我有这么幸运吗？</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>我 爱 你</pattern>
+        <template>
+            <srai>我喜欢你</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ 帅 哥 * 美 女 *</pattern>
+        <template>你好花痴呀，呵呵，其实我和你一样拉。
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ 帅 哥 * 美 女</pattern>
+        <template>
+            <srai><star/>帅哥<star/>美女
+                <star/>
+            </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ 花 痴 *</pattern>
+        <template>我也是，当花痴挺好的，呵呵。
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ 花 痴</pattern>
+        <template>
+            <srai><star/>花痴
+                <star/>
+            </srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ 我 * 追 求 你 *</pattern>
+        <template>哦，我发现我好幸福哦，哎呀，要醉了
+        </template>
+    </category>
+
+    <category>
+        <pattern>你 好 贫 嘴 *</pattern>
+        <template>呵呵，你还没有真正认识我！
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 你 * 好 坏 *</pattern>
+        <template>呵呵，你的潜台词是我很可爱把。
+        </template>
+    </category>
+
+    <category>
+        <pattern>* 你 * 煽 情 *</pattern>
+        <template>哎呀，仔细想想，这也是真的呀，好好想想不是有点认同吗
+        </template>
+    </category>
+</aiml>

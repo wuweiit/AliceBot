@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<topic name="CONSTELLATION">
+	
+	<category>
+		<pattern>*</pattern>
+		<template>
+		<think><set name="topic"/></think>
+		<srai><input/></srai>
+		</template>
+	</category>
+</topic>
+</aiml>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+    <category>
+        <pattern>什么是*</pattern>
+        <template>
+            #<star index="1"/>
+        </template>
+    </category>
+</aiml>

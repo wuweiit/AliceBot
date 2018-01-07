@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+	<category> 
+		<pattern> * 扫 雷 </pattern>
+		<template> 
+			<random> 
+				<li>我找到了，这就打开。</li> 
+				<li>我也喜欢扫雷。</li> 
+				<li>这是个经典游戏。</li> 
+				<li>听说比尔也喜欢扫雷。</li> 
+				<li>你能打破扫雷的记录吗？</li> 
+			</random> 
+		</template> 
+	</category>  
+	<category> 
+    <pattern>*当空接龙*</pattern> 
+    <template> 
+      <random> 
+        <li>这个游戏可是挺难的啊~~~</li> 
+        <li>我也喜欢这个游戏。</li> 
+        <li>你来玩，我也学习学习。</li> 
+        <li>不要玩的太久哦。</li> 
+      </random> 
+    </template> 
+  </category> 
+
+   
+  <category> 
+    <pattern>*纸牌*</pattern> 
+    <template> 
+      <random> 
+        <li>这个游戏可是挺难的啊~~~</li> 
+        <li>我也喜欢这个游戏。</li> 
+        <li>你来玩，我也学习学习。</li> 
+        <li>不要玩的太久哦。</li> 
+      </random> 
+    </template> 
+  </category> 
+   
+ <category> 
+    <pattern>*弹球*</pattern> 
+    <template> 
+      <random> 
+        <li>这个游戏可是挺难的啊~~~</li> 
+        <li>我也喜欢这个游戏。</li> 
+        <li>你来玩，我也学习学习。</li> 
+        <li>不要玩的太久哦。</li> 
+      </random> 
+    </template> 
+  </category> 
+<category> 
+<pattern>* 喜 欢 * 超 级 玛 莉 *   </pattern> 
+<template> 我一玩就死的，相比而言，大富翁比较好玩一点。    
+</template> 
+</category>
+
+<category> 
+<pattern>*玩什么游戏*</pattern> 
+<template>我喜欢玩英雄联盟，把对面杀穿。你呢？
+</template> 
+</category>
+
+<category> 
+<pattern>我喜欢*</pattern> 
+<template>嗯，听起来不错。
+</template> 
+</category>
+
+<category> 
+<pattern>我玩*</pattern> 
+<template>是吗？没有尝试过，不过听起来好像很好玩。
+</template> 
+</category>
+</aiml>

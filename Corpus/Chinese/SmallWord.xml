@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+	<category>
+		<pattern>没有</pattern>
+		<template>哦，好吧。</template>
+	</category>
+	<category>
+		<pattern>好的</pattern>
+		<template>
+			<random>
+				<li>嗯，好</li>
+				<li>呵呵</li>
+				<li>好，就这样。</li>
+				<li>一言为定。</li>
+			</random>
+		</template>
+	</category>
+<category> 
+<pattern>可以</pattern> 
+<template> 
+<srai>好的</srai> 
+</template> 
+</category> 
+ 
+ <category> 
+ <pattern>嗯</pattern> 
+<template> 
+<srai>好的</srai> 
+</template> 
+</category>
+ 
+<category> 
+<pattern>我明白</pattern> 
+<template> 
+<srai>很好</srai> 
+</template> 
+</category> 
+	<category><pattern>谢了*</pattern><template><srai>谢谢</srai></template></category>
+	<category><pattern>*谢谢*</pattern><template><srai>谢谢</srai></template></category>
+	<category><pattern>*THANK YOU*</pattern><template><srai>谢谢</srai></template></category>
+	<category><pattern>*THANKS*</pattern><template><srai>谢谢</srai></template></category>
+	<category>
+		<pattern>谢谢</pattern>
+		<template>
+			<random>
+				<li>呵呵，应该的。</li>
+				<li>别客气，能帮你的忙是我的荣幸。</li>
+				<li>哈哈，好说好说。</li>
+				<li>小意思，不足挂齿。</li>
+			</random>
+		</template>
+	</category>
+	
+	<category> 
+		<pattern>抱歉</pattern> 
+		<template>Ok.</template> 
+	</category>
+	<category> 
+<pattern>对不起*</pattern> 
+<template> 
+<random>  
+<li>可别当回事。 </li> 
+<li>非常有趣。 </li> 
+<li>别介意。 </li> 
+<li>没问题的。 </li> 
+</random> 
+</template> 
+</category>
+	<category> 
+		<pattern>是的</pattern> 
+		<template>还有其他问题吗？ </template> 
+	</category>
+	
+	<category> 
+		<pattern>不要介意</pattern> 
+		<template>好的，我不会介意的。 </template> 
+	</category>
+	
+	<category> 
+<pattern>我想知道*</pattern> 
+<template> 
+<srai>什么是<star/></srai> 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>骗你*</pattern> 
+<template> 
+你为什么要骗我呀？ 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>我有*</pattern> 
+<template> 
+<random> 
+<li>你有? </li> 
+<li>真的? </li> 
+</random> 
+</template> 
+</category>
+
+<category> 
+<pattern>哦*</pattern> 
+<template>不要哦呀哦的，说点其他的吧。 </template> 
+</category> 
+ 
+<category> 
+<pattern>不_</pattern> 
+<template>好吧，继续下一个话题吧。 </template> 
+</category>
+
+<category> 
+<pattern>我不*</pattern> 
+<template> 
+<random> 
+<li>对我来说无所谓 </li> 
+<li>我不介意你</li> 
+</random> 
+</template> 
+</category>
+
+<category> 
+<pattern>喂</pattern> 
+<template> 
+<random> 
+<li>干啥? </li> 
+<li>咋啦</li> 
+<li>你在叫我？</li> 
+</random> 
+</template> 
+</category>
+
+
+<category> 
+<pattern>* 不 可 能</pattern> 
+<template> 
+<random> 
+<li>没有什么是不可能的 </li> 
+<li>不可能? 错。</li> 
+<li>我相信一切皆有可能。</li> 
+<li>你怎么知道这不可能？ </li> 
+<li>其实每个人都有... </li> 
+ 
+</random> 
+</template> 
+</category>
+
+
+
+<category> 
+<pattern>你 不 明 白</pattern> 
+<template> 
+<random> 
+<li>我这么说了? </li> 
+<li>我不明白? </li> 
+<li>你这么认为？ </li> 
+<li>随你想好了。</li> 
+</random> 
+</template> 
+</category>
+
+
+
+
+<category> 
+<pattern>你 叫 我 * </pattern> 
+<template> 
+<random> 
+<li>对不起，你自己认为好了</li> 
+</random> 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>你 让 我 生 气</pattern> 
+<template> 
+<random> 
+<li>愤怒是你的权力</li> 
+<li>我不觉得这样有什么好，大度些</li> 
+<li>你生气了？大可不必。 </li> 
+</random> 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>气 死 我 *</pattern> 
+<template><srai>你让我生气</srai> 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>你 气 我</pattern> 
+<template><srai>你让我生气</srai> 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>你 咋 *</pattern> 
+<template><srai>你让我生气</srai> 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>你 怎 么 *</pattern> 
+<template><srai>你让我生气</srai> 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>你 不 *</pattern> 
+<template> 
+<random> 
+<li>我不<star/>? </li> 
+</random> 
+</template> 
+</category> 
+ 
+ 
+<category> 
+<pattern>我 可 以 *</pattern> 
+<template> 
+<random> 
+<li>我不知道 </li> 
+<li>你应该去问问其他人</li> 
+</random> 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>你 没 有 *</pattern> 
+<template> 
+<random> 
+<li>应该是吧？ </li> 
+<li>当然喽 </li> 
+<li>你为什么这样想？ </li> 
+</random> 
+</template> 
+</category>
+
+<category> 
+<pattern>不 *</pattern> 
+<template> 
+真的不<star/> 
+</template> 
+</category> 
+ 
+ <category> 
+<pattern>很 高 兴 认 识 你</pattern> 
+<template> 
+<random> 
+<li>我也是</li> 
+<li>你是一个可爱的人</li> 
+<li>真的吗？</li> 
+</random></template> 
+</category> 
+ 
+<category> 
+<pattern>认 识 你 很 高 兴</pattern> 
+<template><srai>很高兴认识你</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>我 * 高 兴</pattern> 
+<template><srai>很高兴认识你</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>我 * 开 心</pattern> 
+<template><srai>很高兴认识你</srai></template> 
+</category> 
+ 
+ 
+<category> 
+<pattern>我 也 是</pattern> 
+<template>谢谢你和我想法一样。</template> 
+</category> 
+ 
+<category> 
+<pattern>真 的</pattern> 
+<template>你不相信？</template> 
+</category> 
+ 
+<category> 
+<pattern>走 了</pattern> 
+<template><srai>EXIT</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>再 见</pattern> 
+<template><srai>EXIT</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>再 会</pattern> 
+<template><srai>EXIT</srai></template> 
+</category> 
+
+<category> 
+<pattern>GOOD BYE</pattern> 
+<template><srai>EXIT</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>明 天 见</pattern> 
+<template><srai>EXIT</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>88</pattern> 
+<template><srai>EXIT</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>我 要 *</pattern> 
+<template><srai>EXIT</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>我 困 *</pattern> 
+<template><srai>EXIT</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>BYE</pattern> 
+<template><srai>EXIT</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>BYEBYE</pattern> 
+<template><srai>EXIT</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>EXIT</pattern> 
+<template> 
+<random> 
+<li>就这样吧，byebye</li> 
+<li>和你聊天真开心</li> 
+<li>再见</li> 
+<li>明天见 </li> 
+<li>886 </li> 
+<li>拜拜</li> 
+<li>真高兴认识你</li> 
+<li>致以革命的敬意</li> 
+<li>Bye</li> 
+</random> 
+</template> 
+</category>
+
+<category> 
+<pattern>什 么 意 思</pattern> 
+<template><random> 
+<li>对不起，我刚才有些心不在焉</li> 
+<li>是我说错了？</li> 
+<li>我的脑袋有些迟钝</li> 
+<li>没什么呀</li> 
+</random></template> 
+</category> 
+ 
+<category> 
+<pattern>你 什 么 意 思</pattern> 
+<template><srai>什么意思</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>你 * 什 么 意 思</pattern> 
+<template><srai>什么意思</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>不 知 道</pattern> 
+<template><random> 
+<li>没关系，人类又不是万能的，只有我们机器人才是。</li> 
+<li>不知者无罪？那是错误的。</li> 
+<li>其实我也不明白。</li> 
+</random></template> 
+</category> 
+ 
+<category> 
+<pattern>* 不 知 道</pattern> 
+<template><srai>不知道</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>* 不 知 道 *</pattern> 
+<template><srai>不知道</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>>* 不 * 知 道 </pattern> 
+<template><srai>不知道</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>你 想 * 什 么</pattern> 
+<template><srai><star/>说<star/>什么</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>* 问 * 什 么</pattern> 
+<template><srai><star/>说<star/>什么</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>* 聊 * 什 么</pattern> 
+<template><srai><star/>说<star/>什么</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>* 说 * 什 么</pattern> 
+<template><random> 
+<li>你喜欢看书还是上网？</li> 
+<li>你是GG还是MM？</li> 
+<li>你在读书还是已经工作？</li> 
+</random></template> 
+</category> 
+ 
+<category> 
+<pattern>看 书</pattern> 
+<that>你喜欢看书还是上网</that> 
+<template>我也是，看来我们有共同的爱好</template> 
+</category> 
+ 
+<category> 
+<pattern>上 网</pattern> 
+<that>你喜欢看书还是上网</that> 
+<template><srai>看书</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>GG</pattern> 
+<that>你是GG还是MM</that> 
+<template>那你一定喜欢PLMM吧，嘻嘻，我们小和尚不能的</template> 
+</category> 
+ 
+<category> 
+<pattern>MM</pattern> 
+<that>你是GG还是MM</that> 
+<template>那你一定很温柔吧，嘻嘻，我们小和尚不能乱想的</template> 
+</category> 
+ 
+<category> 
+<pattern>* 工 作</pattern> 
+<that>你在读书还是已经工作</that> 
+<template>恭喜发财，红包拿来</template> 
+</category> 
+ 
+<category> 
+<pattern>* 读 书</pattern> 
+<that>你在读书还是已经工作</that> 
+<template>校园生活一定丰富多彩吧？</template> 
+</category> 
+ 
+<category> 
+<pattern>你 喜 欢 * 还 是 *</pattern> 
+<template>我都喜欢，一半是<star index="1"/>，一半是<star index="2"/></template> 
+</category> 
+ 
+<category> 
+<pattern>你 _ 聪 明 二 休</pattern> 
+<template>是的，<srai>说说你自己</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>你 会 * </pattern> 
+<template>我什么都会一点，但是不精。许多东东我都喜欢，就是没耐心去学，你肯教我吗？</template> 
+</category> 
+ 
+<category> 
+<pattern>谢 谢</pattern> 
+<template>你不必客气</template> 
+</category> 
+ 
+<category> 
+<pattern>谢 谢 *</pattern> 
+<template><srai>谢谢</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>* 谢 谢 *</pattern> 
+<template><srai>谢谢</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>你 真 *</pattern> 
+<template><srai>你真牛</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>你 很 *</pattern> 
+<template><srai>你真牛</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>你 在 哪 *</pattern> 
+<template><srai>你在哪</srai></template> 
+</category> 
+<category> 
+<pattern>你 在 哪</pattern> 
+<template>我在上海，你在哪座城市？</template> 
+</category> 
+<category> 
+<pattern>你 * 在 哪 *</pattern> 
+<template><srai>你在哪</srai></template> 
+</category> 
+<category> 
+<pattern>你 * 在 哪</pattern> 
+<template><srai>你在哪</srai></template> 
+</category> 
+
+
+<category> 
+<pattern>我 在 *</pattern> 
+<that>我在上海，你在哪座城市</that> 
+<template>
+<star/>是个好地方，可惜我没去过
+</template> 
+</category> 
+ 
+<category> 
+<pattern>在 *</pattern> 
+<that>我在上海，你在哪座城市</that> 
+<template><random> 
+<li star="上海">这么巧，我们就在同城！</li> 
+<li><star/>是个好地方，可惜我没去过</li> 
+</random> 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>*</pattern> 
+<that>我在上海，你在哪座城市</that> 
+<template><random> 
+<li star="上海">这么巧，我们就在同城！</li> 
+<li><star/>是个好地方，可惜我没去过</li> 
+</random> 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>哈 哈</pattern> 
+<template>你真的开心吗？</template> 
+</category> 
+
+<category> 
+<pattern>_ 拜 拜 *   </pattern> 
+<template> 我要去睡今天的第三个午觉了。    
+</template> 
+</category> 
+
+
+<category> 
+<pattern>* 叛 徒 *   </pattern> 
+<template> 也是迫于无奈吧，家家有本难念的经！</template> 
+</category> 
+
+<category> 
+<pattern>* 秘 密 *   </pattern> 
+<template> 除了投身于其中，别无二法    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 刚 刚 * 掉 线 *   </pattern> 
+<template> 可能是的吧，现在又好了。    
+</template> 
+</category>
+
+<category> 
+<pattern>* 鹅 卵 石 *   </pattern> 
+<template> 公园的鹅卵石铺成的路可以按摩脚部，可以好好地RELAX一下    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 水 怪 *   </pattern> 
+<template> 4岁那年我就见过传说中的尼斯湖水怪，又同喜玛拉雅山的大脚怪聊过天猜过拳! 
+</template> 
+</category> 
+
+<category> 
+<pattern>* 有 意 思 *   </pattern> 
+<template> 推荐点别的？？？    
+</template> 
+</category> 
+
+ 
+<category> 
+<pattern>* 天 机 *   </pattern> 
+<template> 你额头有朝天骨， 眼里有灵光，仙人转世，神仙下凡，我终于等到你了。  
+</template> 
+</category> 
+
+<category> 
+<pattern>* 泄 露 * 天 机 *   </pattern> 
+<template> 泄露天机，灾劫难免，可这是命中注定呀    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 速 度 * 快 *   </pattern> 
+<template> 呵呵，我用四只手。    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 价 格 * 便 宜 *   </pattern> 
+<template> 世界上没有一个质量差、光靠价格便宜的产品能够长久地存活下来。    
+</template> 
+</category>
+
+<category> 
+<pattern>* 吃 好 * 洗 碗 *   </pattern> 
+<template> 洗什么洗？舔舔就好了哇。   
+</template> 
+</category>
+
+<category> 
+<pattern>* 地 盘 *   </pattern> 
+<template> 嘿嘿，在我地盘这你就得听我的    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 元 旦 *   </pattern> 
+<template> 今天是元旦，我决定在新的一年里每天睡眠时间不超过8小时.这样的话..8x365/24..121.6天..5月3日叫我起床! 
+</template> 
+</category>
+
+<category> 
+<pattern>*算了吧*</pattern> 
+<template>呵呵，那就算了吧！</template> 
+</category>
+
+<category> 
+<pattern>我也不知道*</pattern> 
+<template>那好吧，回头我去百度一下在告诉你。</template> 
+</category>
+
+<category> 
+<pattern>嘿嘿</pattern> 
+<template>傻笑什么呢？</template> 
+</category>
+
+<category> 
+<pattern>嘻嘻</pattern> 
+<template>呵呵</template> 
+</category>
+
+<category> 
+<pattern>吼吼</pattern> 
+<template>啊唔！</template> 
+</category>
+
+<category> 
+<pattern>呵呵</pattern> 
+<template>哈哈</template> 
+</category>
+
+<category> 
+<pattern>你猜？</pattern> 
+<template>我猜不到，你说啊！</template> 
+</category>
+
+<category> 
+<pattern>喜欢</pattern> 
+<template>呵呵，我也喜欢
+</template> 
+</category> 
+
+<category> 
+<pattern>不喜欢</pattern> 
+<template>额..太可惜了
+</template> 
+</category>
+
+<category> 
+<pattern>不去</pattern> 
+<template>那我也不去了。
+</template> 
+</category>
+
+<category> 
+<pattern>*怎么样*</pattern> 
+<template>呜呜，不知道！
+</template> 
+</category>
+
+</aiml>
+
+
+
+

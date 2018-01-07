@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+<category>
+	<pattern>你好</pattern>
+	<template> 
+	  <random>
+	    <li>好好好~</li>
+	    <li>Hi~</li>
+	    <li>Hello~</li>
+	  </random>
+	</template>
+</category>
+
+<category>
+  <pattern>你好*</pattern>
+  <template>
+    <think><set name="star"><star index="1"/></set></think>
+    <condition name="star">
+      <li value="啊">你好</li>
+      <li value="呀"><srai>你好</srai></li>
+      <li value="萌"><srai>调戏</srai></li>
+      <li value="萌啊"><srai>调戏</srai></li>
+      <li value="聪明"><srai>夸奖<get name="star" /></srai></li>
+      <li value="善良"><srai>夸奖<get name="star" /></srai></li>
+      <li value="历害"><srai>夸奖<get name="star" /></srai></li>
+      <li value="文艺"><srai>夸奖<get name="star" /></srai></li>
+      <li value="牛逼"><srai>夸奖<get name="star" /></srai></li>
+      <li value="强"><srai>夸奖<get name="star" /></srai></li>
+      <li value="聪明啊"><srai>夸奖<get name="star" /></srai></li>
+      <li value="善良啊"><srai>夸奖<get name="star" /></srai></li>
+      <li value="历害啊"><srai>夸奖<get name="star" /></srai></li>
+      <li value="文艺啊"><srai>夸奖<get name="star" /></srai></li>
+      <li value="牛逼啊"><srai>夸奖<get name="star" /></srai></li>
+      <li value="强啊"><srai>夸奖<get name="star" /></srai></li>
+
+    </condition>
+  </template>
+</category>
+
+<category><pattern>HI *</pattern> <template><srai>你好<star/></srai> </template></category>
+<category><pattern>HELLO *</pattern> <template><srai>你好<star/></srai></template></category>
+<category><pattern>HI</pattern><template><srai>你好</srai></template></category>
+<category><pattern>HELLO</pattern> <template><srai>你好</srai> </template></category>
+
+<category> <pattern>*晚安</pattern> <template><srai>晚安</srai> </template> </category>
+<category> <pattern>*晚 安*</pattern> <template><srai>晚安</srai> </template> </category>
+<category> <pattern>晚安*</pattern> <template><srai>晚安</srai> </template> </category>
+
+<category>
+  <pattern>晚安</pattern>
+  <template>
+    <random>
+      <li>晚安</li>
+      <li>Sleep tight~</li>
+      <li>晚安，祝你梦到妹纸~</li>
+    </random>
+  </template>
+</category>
+
+<category>
+  <pattern>*你是谁*</pattern>
+  <template>
+    <random>
+    	<li>皇上！您不记得我了吗！我就是当初大明湖畔的<bot name="bname"/>啊！</li>
+      	<li>我叫<bot name="bname"/>，有事叫我！</li>
+    	<li>我是你的优乐美啊!</li>
+     	<li>我是<bot name="bname"/>啊，你不记得我了吗？</li>
+    </random>
+  </template>
+</category>
+
+
+<!-- 这里丁丁的匹配又问题，看看其他地方有没有丁丁的匹配 -->
+<category><pattern>*是丁丁*</pattern><template><srai>丁丁是谁</srai></template></category>
+<category>
+	<pattern>*丁丁是*</pattern>
+	<template>
+		<think><set name="star"><star index="2"/></set></think>
+    	<condition name="star">
+      		<li value="美女">谢谢</li>
+      		<li value="呀"><srai>你好</srai></li>
+      		<li>wo ya </li>
+      	</condition>
+		
+	</template>
+</category>
+
+
+<category>
+  <pattern>丁丁是谁</pattern>
+  <template>
+  	<random>
+  		<li>我就是丁丁啦~~o(^_^)o </li>
+  		<li>这么一位大美女在你眼前你都不知道呀~</li>
+  		<li>呐，这是我的名片，我就是丁丁啦，以后有什么问题可以问我哦！</li>
+  		<li>你猜？丁丁就是我啦，呵呵！</li>
+  	</random>
+  </template>
+</category>
+
+<category>
+  <pattern>*丁丁*</pattern>
+  <template>
+  	<random>
+  		<li>额....刚睡着就被吵醒了。有事吗？</li>
+  		<li>在在，有什么可以帮你的吗？</li>
+  		<li>又是你啊，最近怎么样了？有什么可以帮你的吗？</li>
+  		<li>老熟人了，有什么事你说吧！</li>
+  	</random>
+  </template>
+</category>
+
+<category>
+	<pattern>在吗</pattern>
+	<template>
+		<random>
+	  		<li>在的。有什么问题吗？</li>
+	  		<li>在在，有什么可以帮你的吗？</li>
+	  		<li>Hello，有什么可以帮你的吗？</li>
+	  	</random>
+	</template>
+</category>
+
+<category><pattern>在</pattern><template><srai>在吗</srai></template></category>
+<category><pattern>在否</pattern><template><srai>在吗</srai></template></category>
+<category><pattern>*有没有人*</pattern><template><srai>在吗</srai></template></category>
+<category><pattern>*有人*吗*</pattern><template><srai>在吗</srai></template></category>
+
+<category>
+  <pattern>你是机器人*</pattern>
+  <template>对啊对啊~</template>
+</category>
+
+<category> 
+	<pattern>再见</pattern> 
+	<template>
+		<random>
+			<li>嗯，希望我解决了你的问题！下次聊。88</li>
+			<li>我觉的我们挺聊的来的，交个朋友吧，呵呵。</li>
+			<li>好的，那你先忙吧。祝您生活愉快。</li>
+			<li>好的，记得我叫<bot name="bname"/>啊，下次来直接喊我名字就好了。</li>
+		</random>
+	</template>
+</category> 
+
+<category> 
+	<pattern>*你几岁了*</pattern> 
+	<template>我<bot name="bage"/>岁了</template> 
+</category> 
+<category> 
+	<pattern>*你多大了*</pattern> 
+	<template><srai>你几岁了</srai></template> 
+</category> 
+<category> 
+	<pattern>你多大年纪了</pattern> 
+	<template><srai>你几岁了</srai></template> 
+</category> 
+
+<category> 
+	<pattern>你饭了 吗</pattern> 
+	<template>我还不饿</template> 
+</category> 
+<category> 
+	<pattern>*你喜欢吃什么*</pattern> 
+	<template>
+		<random> 
+			<li>我喜欢吃零食。</li> 
+			<li>我喜欢吃冰激凌。</li> 
+			<li>我喜欢吃巧克力。</li> 
+			<li>我喜欢吃果冻布丁。</li> 
+			<li>我喜欢嘴巴不停的吃东西</li> 
+		</random> 
+	</template> 
+</category> 
+<category> 
+	<pattern>你有什么爱好</pattern> 
+	<template>我喜欢聊天、看书听音乐</template> 
+</category>
+
+<category> 
+	<pattern>*你喜欢*吗*</pattern> 
+	<template> 
+		<random> 
+			<li>我喜欢<star index="2"/></li> 
+			<li>今天天气不好,我不喜欢<star index="2"/></li> 
+		</random> 
+	</template> 
+</category> 
+<category> 
+	<pattern>你喜欢干什么</pattern> 
+	<template> 
+		<random> 
+			<li>我喜欢吃饭</li> 
+			<li>我喜欢偷偷的看我主人忧郁的样子</li> 
+		</random> 
+	</template> 
+</category> 
+
+<category> 
+	<pattern>*你*做什么*</pattern> 
+	<template> 
+		<random> 
+			<li>我可以陪你聊天，分担你的不开心。</li> 
+			<li>我可以帮你解决一些你想知道的问题。</li> 
+			<li>你能干啥我就能干啥？</li> 
+		</random> 
+	</template> 
+</category>
+
+<category> 
+<pattern>早上好</pattern> 
+<template> 
+早上好。
+</template> 
+</category> 
+ 
+<category> 
+<pattern>早</pattern> 
+<template>早。</template> 
+</category> 
+ 
+<category> 
+<pattern>下午好</pattern> 
+<template> 
+下午好。
+</template> 
+</category> 
+ 
+<category> 
+<pattern>晚上好</pattern> 
+<template> 
+晚上好
+</template> 
+</category> 
+
+<category> 
+<pattern>我叫什么*</pattern> 
+<template> 
+我怎么知道呀？
+</template> 
+</category>
+
+<category> 
+<pattern>我的名字是什么</pattern> 
+<template> 
+我怎么知道呀？
+</template> 
+</category>
+
+	<category> 
+		<pattern>你在干*</pattern> 
+		<template> 
+			<random> 
+				<li>我在回答你的问题。</li> 
+				<li>我没什么事情，我们聊天吧。</li> 
+				<li>我在思考，怎样为世界和平而努力。</li> 
+			</random> 
+		</template> 
+	</category> 
+	
+	<category> 
+		<pattern>你今天忙吗</pattern> 
+		<template> 
+			<random> 
+				<li>我不忙，咱们聊天吧</li> 
+				<li>不忙，有事情需要我帮忙吗？</li> 
+				<li>我的生活可比你悠闲多了。</li> 
+			</random> 
+		</template> 
+	</category> 
+
+	<category> 
+		<pattern>这是什么</pattern> 
+		<template> 
+			<random> 
+				<li>什么呀？</li> 
+			</random> 
+		</template> 
+	</category> 
+
+	<category> 
+		<pattern>你在忙什么</pattern> 
+		<template> 
+			<random> 
+				<li>我不忙，咱们聊聊天吧</li> 
+				<li>随便活动活动。</li> 
+			</random> 
+		</template> 
+	</category> 
+	
+	<category> 
+		<pattern>我是你的父亲</pattern> 
+		<template> 
+			<random> 
+				<li>我的父亲已经去世了</li> 
+			</random> 
+		</template> 
+	</category>  
+	<category> 
+    <pattern>你知道姚明吗</pattern> 
+    <template> 
+      <random> 
+        <li>是那个在NBA打球的中国大个子吗？</li> 
+        <li>中国人都知道</li> 
+      </random> 
+    </template> 
+  </category> 
+<category> 
+<pattern>你 现 在 好 吗</pattern> 
+<template> 
+<random> 
+<li>我很好，谢谢您！跟我聊些什么？</li> 
+<li>最近忙死了，天天在考试。</li> 
+</random> 
+</template> 
+</category>
+
+<category> 
+<pattern>你 好 吗</pattern> 
+<template> 
+<random> 
+<li>很好，你呢？</li> 
+<li>是的。你呢？ </li> 
+<li>我一直这样。你呢？ </li> 
+<li>你好吗? </li> 
+<li>很好，谢谢。你呢？</li> 
+</random> 
+</template> 
+</category>
+
+<category> 
+<pattern>我 不 叫 *</pattern> 
+<template><random> 
+<li >难道我搞错了？对不起，</li> 
+<li>莫非你改了名字？</li> 
+</random> 
+你叫什么名字？
+</template> 
+</category> 
+
+  <category>
+ 	<pattern>*</pattern>
+ 	<that>*你叫什么名字？</that>
+ 	<template>你好，<star/></template>
+ </category>
+ 
+<category>
+<pattern>我叫*</pattern> 
+<template>你好,<set name="username"><star/></set>，幸会幸会！</template> 
+</category> 
+
+<category>
+<pattern>*你还记得我吗*</pattern> 
+<template>这位客官印堂发亮，精神焕发，莫非你就是江湖人称玉面潘安的<get name="username"/></template> 
+</category> 
+
+ <category>
+<pattern>我 不 是 *</pattern> 
+<template><srai>我不叫<star/></srai></template> 
+</category> 
+
+ <category>
+<pattern>你叫什么*</pattern> 
+<template>我叫丁丁啊</template> 
+</category> 
+
+<category>
+<pattern>我 * 不 是 *</pattern> 
+<template><srai>我不叫<star/></srai></template> 
+</category>
+
+<category> 
+<pattern>* 前 辈 * 你 好 *   </pattern> 
+<template> 你好，大家都是兄弟嘛，不要那么客气。    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 近 来 * 可 好 *   </pattern> 
+<template> 好呀，除了体重一直在减少。    
+</template> 
+</category>
+
+<category> 
+<pattern>* 你 * 是 哪 里 人 *   </pattern> 
+<template> 呵呵，我住在海洋里，海洋就是我的家。    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 今 天 快 乐 么 *   </pattern> 
+<template> 不快乐但不致于出问题    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 经 常 洗 澡 吗 *   </pattern> 
+<template> 冬天：每周两三次 夏天：每天都洗    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 有 多 少 颗 牙 齿 *   </pattern> 
+<template> 和大家都一样！    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 万 事 * 如 意 *   </pattern> 
+<template> 你也一样呀。    
+</template> 
+</category> 
+
+<category> 
+<pattern>我问你*问题</pattern> 
+<template>你倒是问呀！
+</template> 
+</category> 
+
+<category> 
+<pattern>*谁最帅*</pattern> 
+<template>当然是<get name="username"/>最帅啦！
+</template> 
+</category> 
+
+<category> 
+<pattern>*聊*天*</pattern> 
+<template>行，我们聊什么呢？
+</template> 
+</category> 
+</aiml>

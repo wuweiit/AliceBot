@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category> 
+<pattern>_ 公 司 * 标 准 *   </pattern> 
+<template> 三流的公司卖劳力，二流的公司卖产品，一流的公司卖
+技术，超一流的公司卖标准。    
+</template> 
+</category> 
+
+ 
+<category> 
+<pattern>* 出 色 * 男 人 *   </pattern> 
+<template> 无论在什么地方，都像漆黑中的萤火虫一样，那样的鲜明，那样的出众。    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 女 人 *   </pattern> 
+<template> 香水是女人的第二层皮    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 被 * 解 雇 *   </pattern> 
+<template> 一切正常呀。   
+</template> 
+</category>
+
+<category> 
+<pattern>* 经 济 *   </pattern> 
+<template> 不管什么经济，能赚钱的经济才是好经济。    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 新 经 济 *   </pattern> 
+<template> 一场由风险资本推动的全社会的造钱运动。    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 公 司 * 招 人 *   </pattern> 
+<template> 我好久都没面试了    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 城 市 *   </pattern> 
+<template> 我喜欢农村，有新鲜的空气：）人会长命百岁的    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 过 关 *   </pattern> 
+<template> 开玩笑，对你来说还不是小CASE呀    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 赚 钱 * 难 *   </pattern> 
+<template> 是哦，我的梦想就是哪天可以坐在办公室里数钞票，呵呵。    
+</template> 
+</category>
+
+<category> 
+<pattern>* 女 博 士 *   </pattern> 
+<template> 真想见识见识这些灭绝师太：）    
+</template> 
+</category>
+
+<category> 
+<pattern>* 拍 * 马 屁 *   </pattern> 
+<template> 呵呵，那你要拍好了哇    
+</template> 
+</category> 
+</aiml>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+    <category>
+        <pattern>你*主人是谁</pattern>
+        <template>
+            <srai>你主人是谁</srai>
+        </template>
+    </category>
+
+    <category>
+        <pattern>你主人是谁</pattern>
+        <template>
+            我家主人是既文艺又帅气，爱祖国爱人民的，现在还没有妹纸的大学生 ! 妹纸们快call他吧!
+        </template>
+    </category>
+</aiml>

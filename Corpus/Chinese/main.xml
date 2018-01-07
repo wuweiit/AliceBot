@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category>
+	<pattern>WELCOME</pattern>
+	<template>
+		欢迎！请问我能为你做点什么呢？
+		<system>
+		  import bitoflife.chatterbean.AliceBot;  
+          import bitoflife.chatterbean.Context;  
+          import bitoflife.chatterbean.Graphmaster;  
+          import bitoflife.chatterbean.aiml.Category;  
+          import bitoflife.chatterbean.text.Transformations;  
+           
+          void learn(String pattern, String template)  
+          {  
+            /* The "match" variable represents the current matching context. */  
+            AliceBot bot = match.getCallback();  
+            Context context = bot.getContext();  
+            Transformations transformations = context.getTransformations();  
+     
+            pattern = transformations.normalization(pattern);  
+            Category category = new Category(pattern, new String[] {template});  
+            Graphmaster brain = bot.getGraphmaster();  
+            brain.append(category);  
+          }
+		</system>
+	</template>
+</category>
+
+
+<!-- 这是全局返回的类，这个类比较特殊，在每个返回字符串的最前面加上#号，作为接下来查找数据库知识的标识。 -->
+<!--<category>-->
+  <!--<pattern>*</pattern>-->
+  <!--<template>#</template>-->
+<!--</category>-->
+</aiml>

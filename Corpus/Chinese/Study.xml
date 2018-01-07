@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+<!--
+还不支持if语句。
+<if name="name" value="cars"></if> 
+<if name="name" contains="cars"></if>
+<if name="name" exists="true"></if>
+
+<category>
+<pattern>你叫什么</pattern>
+<template>
+<if name="name" exists="true">
+Your name is <get name="name"/>.
+<else/>
+What is your name?
+</if>
+</template> 
+</category>
+<category>
+	<pattern>我叫*</pattern>
+	<template>
+	<think><set name="name"><star/></set></think>
+	你好啊。
+	</template>
+</category>
+-->
+
+<category>
+	<pattern>T</pattern>
+	
+	<template>
+	<think>  
+        <system> 
+          String learn(String question,String answer)  
+          {  
+          	return question+":"+answer;
+          }
+        </system>  
+      </think>
+	您已经进入机器人训练模式，请输入问题和答案，格式如下：Q问题A答案。例如：Q你好吗？A我很好。或者你可以在问题中加入"*"符号，比如：Q你*好a谢谢，
+	当你输入你真好或你很好时，机器人都会回答谢谢。
+	</template>
+</category>
+
+<category>
+	<pattern>*我教你*</pattern>
+	<template><srai>T</srai></template>
+</category>
+
+
+<category>
+	<pattern>Q*A*</pattern>
+	<template>
+		我学到咯！下次再来和我聊天我会变的不一样哦！
+		<gossip>
+			<system>learn("<star index="1"/>","<star index="2"/>")</system>
+		</gossip>
+	</template>
+</category>
+
+<!--  <category>
+	<pattern>东东</pattern>
+	<template>
+	<think>  
+        <system> 
+          String learn(String str)  
+          {  
+            return "我在学习："+str;
+          }  
+        </system>  
+      </think>
+	</template>
+</category>
+-->
+
+<category> 
+<pattern>*自学*</pattern> 
+<template><gossip>自学<system>learn("哈哈")</system></gossip>  
+</template> 
+</category> 
+
+<category> 
+<pattern>* 思 维 *   </pattern> 
+<template> <gossip>天马行空仿如逆水行舟，厉害不愧以点子称王.<id/> </gossip>
+</template> 
+</category> 
+
+<category> 
+<pattern>* 给 你 * 范 文 *   </pattern> 
+<template> 好呀，借鉴借鉴，先谢了    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 及 格 *   </pattern> 
+<template> 对你来说还不是小CASE呀    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 深 造 *   </pattern> 
+<template> 如果是男人还可以考虑，如果是女人就算了    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>* 毕 业 *   </pattern> 
+<template> 还想继续深造吗    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 考 * 傻 *   </pattern> 
+<template> 傻了总比被杀了好,老师是面慈手狠啊,毒的很    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 答 辩 *   </pattern> 
+<template> 就要毕业了哇，恭喜了</template> 
+</category>
+</aiml>

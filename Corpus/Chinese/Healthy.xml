@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+ 
+<category> 
+<pattern>* 晨 练 *   </pattern> 
+<template> 是公园里的一道独特的风景线    
+</template> 
+</category> 
+
+</aiml>

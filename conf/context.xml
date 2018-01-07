@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<context>
+	<!-- The id is a unique string that identifies this context. -->
+	<bot name="id" value="test_cases" />
+
+	<!-- Bot predicates are set at load time, and cannot be changed at runtime. -->
+	<bot name="output" value="./gossip.txt" />
+	<bot name="randomSeed" value="1" />
+	<bot name="series" value="Alpha" />
+	<bot name="version" value="0.7.5 Alpha" />
+	<bot name="location" value="Atlanta" />
+	<bot name="name" value="Alice" />
+	
+	<!-- 机器人的属性   -->
+	<bot name="bname" value="小辉哥" />
+	<bot name="bgender" value="男生" />
+	<bot name="bage" value="18" />
+	<bot name="bhome" value="火星" />
+	<bot name="binterest" value="吃零食，看漫画，逛蘑菇街，打网球，看我主人玩英雄联盟" />
+	<bot name="bconstellation" value="处女座" />
+	<bot name="bcharacter" value="活泼外向" />
+	
+	<bot name="mname" value="小龙" />
+	<bot name="mgender" value="男生" />
+	<bot name="mage" value="23" />
+	<bot name="mhome" value="地球" />
+	<bot name="minterest" value="专研，看书，打网球，跑步，打英雄联盟" />
+	<bot name="mconstellation" value="双子座" />
+	<bot name="mcharacter" value="闷骚内向" />
+
+	<!-- Default values for predicates, can be changed later at runtime. -->
+	<set name="dateFormat" value="yyyy-MM-dd HH:mm:ss" />
+	<set name="topic" value="*" />
+	<set name="test" value="he" />
+	
+</context>

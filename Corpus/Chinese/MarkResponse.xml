@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- 这个文件的回答都带有$号标识，意思是说，需要访问数据库的。 -->
+
+<aiml>
+<category> 
+<pattern>*你知道*</pattern> 
+<template> 
+	<think><set name="star"><star index="2"/></set></think>
+	<condition name="star">
+		<li value="天上有几颗星星">天上有漫天的星星啊。</li>
+		<li>$<get name="star"/></li>
+	</condition>
+</template> 
+</category>
+
+<category>
+	<pattern>*请问*</pattern>
+	<template>$<star index="2"/></template>
+</category>
+
+<category>
+	<pattern>*问一下*</pattern>
+	<template>$<star index="2"/></template>
+</category>
+
+<category> 
+<pattern>*能不能告诉我*</pattern> 
+<template> $<star index="2"/></template> 
+</category> 
+
+<category> 
+<pattern>*请告诉我*</pattern> 
+<template>$<star index="2"/></template> 
+</category> 
+ 
+<category> 
+<pattern>告诉我*</pattern> 
+<template>$<star index="1"/></template> 
+</category> 
+
+<category> 
+	<pattern>*为什么*</pattern>
+	<template>
+	<think><set name="star"><star index="2"/></set></think>
+		<condition name="star">
+			<li value="地球是圆的"><get name="mname"/>教我说：物体在宇宙中的移动始终会受到各种引力的影响，所以他们既公转又自转，而自转的离心力将他们塑造成球形。对不对啊？</li>
+			<li value="你这么漂亮">我就是很漂亮。</li>
+			<li>$<get name="star"/></li>
+		</condition>
+	</template> 
+</category>
+
+<category> 
+<pattern>你 能 说 出 *</pattern> 
+<template> 
+<random> 
+<li>你能说出<star/>? </li> 
+<li>可是我不知道</li> 
+<li>要我说?</li> 
+<li>我不能确定。</li> 
+<li>你用脑子想想? </li> 
+ 
+</random> 
+</template> 
+</category>
+
+<category><pattern>*好不好_</pattern> <template> <srai><star/>好不好</srai></template> </category>
+<category><pattern>*行不行_</pattern> <template> <srai><star/>好不好</srai></template> </category>
+<!--<category><pattern>*怎么样_</pattern> <template> <srai><star/>好不好</srai></template> </category>
+  <category><pattern>*怎么样</pattern> <template> <srai><star/>好不好</srai></template> </category>-->
+
+<category>
+  <pattern>*好不好</pattern>
+  <template>
+    <think><set name="star"><star index="1"/></set></think>
+    <condition name="star">
+      <li value="亲一下"><srai>调戏</srai></li>
+      <li value="宁波理工">宁波理工学校是一所名校，该校出过很多牛人啊，名气可大了呢！</li>
+      <li value="这样做">嗯，这是一个问题，得好好想想。</li>
+      <li><get name="star"/>是神马？可以吃么？</li>
+    </condition>
+  </template>
+</category>
+
+
+<category>
+  <pattern>*行不行</pattern>
+  <template>
+    <think><set name="star"><star index="1"/></set></think>
+    <condition name="star">
+      <li value="亲一个"><srai>调戏</srai></li>
+      <li value="亲一下"><srai>调戏</srai></li>
+      <li>
+        <random>
+          <li>不要！</li>
+          <li>雅妹嘚！</li>
+        </random>
+      </li>
+      </condition>
+  </template>
+</category>
+
+
+
+<category> 
+	<pattern>我*想知道*</pattern> 
+	<template>$<star index="2"/></template> 
+</category>
+
+<category> 
+	<pattern>我希望*</pattern> 
+	<template> 
+			<random> 
+				<li>尝试着去做吧? </li> 
+				<li>那具体是什么意思呢? </li> 
+				<li>那你想知道我希望什么吗？ </li> 
+			</random> 
+	</template> 
+</category>
+
+<category> 
+<pattern>你 认 为 * </pattern> 
+<template> 
+也许是，也许不是。 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>你 以 为 * </pattern> 
+<template> 
+说实在的我也不清楚。</template> 
+</category>
+</aiml>

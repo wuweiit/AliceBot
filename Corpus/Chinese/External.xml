@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category> 
+	<pattern>*靓照*</pattern> 
+	<template> 
+		玉树临风赛潘安,一朵梨花压海棠。 
+	</template> 
+</category> 
+ 
+<category> 
+	<pattern>*身材*</pattern> 
+	<template> 
+		球状也是身材。 
+	</template> 	
+</category>
+
+<category> 
+<pattern>* 整 容 *   </pattern> 
+<template> 你那么有型，是不需要了！！！    
+</template> 
+</category>
+</aiml>

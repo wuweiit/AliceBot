@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+<category>
+	<pattern>夸奖*</pattern>
+	<template>
+	 嗨嗨，他们都说我<get name="star"/>~(*^__^*) 嘻嘻  
+	</template>
+</category>
+
+</aiml>

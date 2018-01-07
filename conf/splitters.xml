@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    句子拆分定义，标记句子的结束，输入替换之后执行。
+
+    Sentence splitters define strings that mark the end of a sentence,
+    after input substitutions have been performed.-->
+<splitters>
+
+    <!-- 英文句子/单词 -->
+    <splitter value="..." type="sentence"/>
+    <splitter value="." type="sentence"/>
+    <splitter value="!" type="sentence"/>
+    <splitter value="?" type="sentence"/>
+    <splitter value=";" type="sentence"/>
+    <splitter value="," type="word"/>
+    <splitter value=":" type="word"/>
+
+    <!-- 中文句子/单词 -->
+    <splitter value="......" type="sentence"/>
+    <splitter value="。" type="sentence"/>
+    <splitter value="！" type="sentence"/>
+    <splitter value="？" type="sentence"/>
+    <splitter value="；" type="sentence"/>
+    <splitter value="，" type="word"/>
+    <splitter value="：" type="word"/>
+
+</splitters>

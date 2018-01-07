@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+	<category> 
+		<pattern>我要努力*</pattern> 
+		<template>你要加油啊。</template> 
+	</category> 
+	<category> 
+		<pattern>没有人是*</pattern> 
+		<template> 
+			<random> 
+				<li>Yeah, I know him - Nobody is a cool guy.</li> 
+				<li>听起来象一部电影的名字。</li> 
+			</random> 
+		</template> 
+	</category>
+</aiml>

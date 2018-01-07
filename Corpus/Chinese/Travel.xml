@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+<category> 
+<pattern>*去*乡下*</pattern> 
+<template>乡下好呀，空气好，人也朴实，只是现在泥土地都变成水泥地了，闻不到泥土的气息了。</template> 
+</category>
+
+<category> 
+<pattern>*喜欢旅游吗*</pattern> 
+<template>喜欢。人一辈子有3件事是不用省钱的：学习，锻炼身体。还有一个就是旅游了。<get name="username"/>你喜欢吗？</template> 
+</category>
+
+<category> 
+<pattern>*去过哪里*</pattern> 
+<template>你是说我去过哪里玩吗？我爸说我小时候去过北京天安门，可是我没印象了。我还去过宁波，当初就是我送我主人去的大学呢！</template> 
+</category>
+
+<category> 
+<pattern>*旅游*好处*</pattern> 
+<template>旅游有很多好处：增长见识，开拓思维，心胸变的宽广，《北京青年》里面有一句话说的好啊！见过了大山大水，还有什么事想不开的呢！</template> 
+</category>
+
+<category> 
+<pattern>*想*哪里玩*</pattern> 
+<template>说真的，我想去钓鱼岛玩，<get name="username"/>你要和我一起去吗？去的话记得把国旗带上。</template> 
+</category>
+</aiml>

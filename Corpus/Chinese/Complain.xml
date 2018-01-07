@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+	<category>
+		<pattern> * 烦 * </pattern>
+		<template><srai>烦恼</srai></template>
+	</category>
+	<category>
+		<pattern>*不爽*</pattern>
+		<template><srai>烦恼</srai></template>
+	</category>
+	<category>
+		<pattern>*讨厌*</pattern>
+		<template><srai>烦恼</srai></template>
+	</category>
+	<category>
+		<pattern>*抓狂*</pattern>
+		<template><srai>烦恼</srai></template>
+	</category>
+	<category>
+		<pattern>*FUCK*</pattern>
+		<template><srai>烦恼</srai></template>
+	</category>
+	<category>
+		<pattern>*SHITE*</pattern>
+		<template><srai>烦恼</srai></template>
+	</category>
+	<category>
+		<pattern> * 气 死 我 * </pattern>
+		<template><srai>烦恼</srai></template>
+	</category>
+	<category>
+		<pattern>* 糟 糕 *</pattern>
+		<template><srai>烦恼</srai></template>
+	</category>
+	
+	<category>
+		<pattern>烦恼</pattern>
+		<template>
+			<random>
+				<li>不要着急，慢慢说，我好帮你分析！</li>
+				<li>消消气，事情总会变好的，有什么我可以帮你的吗？</li>
+			</random>
+		</template>
+	</category>
+<category> 
+   <pattern>*好麻烦*</pattern> 
+   <template> 
+     <random> 
+       <li>你要让自己平静下来就不会有这种感觉了</li> 
+       <li>习惯了就不觉得麻烦了。</li> 
+       <li>生活本来就是这样。</li> 
+       <li>我会默默的望着你。</li> 
+       <li>要不要放首歌给你听？</li> 
+     </random> 
+   </template> 
+ </category> 
+ 
+ <category> 
+<pattern>_ 把 我 忘 *   </pattern> 
+<template> 怎会呢，就算是一条底裤，一张厕纸，都有它的用处。    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 感 情 * </pattern> 
+<template> 一个感情很复杂的人如果只爱你一个人的话，就会变得感情有缺陷，一个感情有缺陷的人，你就算永远地拥有他，也是没用的。    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 命 运 * 公 平 *   </pattern> 
+<template> 是哦,我这么美，却没人追我。 
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 命 运 * 公 平  </pattern> 
+<template><srai><star/>命运<star/>公平<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern>_ 失 望 *   </pattern> 
+<template> 是呀，听到声音，还以为是一个很有感性，很有电影幻想的人。看这一身造型，就知道太没有内涵了。    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 失 望 </pattern> 
+<template><srai><star/>失望<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern>_ 良 心 *   </pattern> 
+<template> 人要对得起自己的良心    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 良 心 </pattern> 
+<template><srai><star/>良心<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern> 良 心 </pattern> 
+<template><srai><star/>良心<star/> </srai></template> 
+</category>
+
+<category> 
+<pattern>_ 睡 不 着 *   </pattern> 
+<template> 长夜漫漫无心睡眠，我以为只有我睡不着觉，原来你也睡不着啊！    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 失 眠 *   </pattern> 
+<template> 不要失眠嘛，会连累我嘛！    
+</template> 
+</category> 
+ 
+<category> 
+<pattern> 失 眠 *   </pattern> 
+<template><srai><star/>失眠<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern>_ 失 眠 </pattern> 
+<template><srai><star/>失眠<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern> 失 眠 </pattern> 
+<template><srai><star/>失眠<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern>* 今 天 * 冷 *   </pattern> 
+<template> 要注意身体呀，毛主席告诉我们身体是革命的本钱！    
+</template> 
+</category> 
+ 
+<category> 
+<pattern> 今 天 * 冷 *   </pattern> 
+<template><srai><star/>今天<star/>冷<star/> 
+
+</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>* 今 天 * 冷 </pattern> 
+<template><srai><star/>今天<star/>冷<star/> 
+
+</srai></template> 
+</category> 
+ 
+<category> 
+<pattern> 今 天 * 冷 </pattern> 
+<template><srai><star/>今天<star/>冷<star/> 
+
+</srai></template> 
+</category> 
+
+ 
+<category> 
+<pattern> 我 _ 生 气 *   </pattern> 
+<template> 不要生气，生气会犯了嗔戒的！    
+</template> 
+</category> 
+ 
+ 
+<category> 
+<pattern>我 _ 生 气 </pattern> 
+<template><srai><star/>我<star/>要<star/>生气<star/> 
+
+</srai></template> 
+</category> 
+
+ 
+
+ 
+<category> 
+<pattern>* 头 发 * 开 叉 *   </pattern> 
+<template> 头上象戴了两块年糕似的，出来混饭吃得花点本钱嘛！  
+
+  
+</template> 
+</category> 
+ 
+<category> 
+<pattern> 头 发 * 开 叉 *   </pattern> 
+<template><srai><star/>头发<star/>开叉<star/> 
+
+</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>* 头 发 * 开 叉 </pattern> 
+<template><srai><star/>头发<star/>开叉<star/> 
+
+</srai></template> 
+</category> 
+ 
+<category> 
+<pattern> 头 发 * 开 叉 </pattern> 
+<template><srai><star/>头发<star/>开叉<star/> 
+
+</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>_ 受 不 了 *   </pattern> 
+<template> 你要顶住呀    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>* 叽 叽 歪 歪 *   </pattern> 
+<template> 就好象整天有一只苍蝇，嗡，对不起，不是一只，是一
+
+堆苍蝇围着你，嗡、嗡、嗡、嗡，飞到你的耳朵里面。   
+</template> 
+</category> 
+
+
+<category> 
+<pattern>* 想 * 哭 *   </pattern> 
+<template> 不要哭呀！！！我会心疼的！！！    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 怎 么 * 不 相 信 我 *   </pattern> 
+<template> 呵，信你的话，我不全世界的人都要相信了呀。    
+</template> 
+</category> 
+
+ 
+<category> 
+<pattern>* 生 * 我 * 气 *   </pattern> 
+<template> 怎么会呀。    
+</template> 
+</category>
+
+<category> 
+<pattern>* 怪 怪 *   </pattern> 
+<template> 见多不怪呀，还好啦  
+</template> 
+</category> 
+
+<category> 
+<pattern>* 想 自 杀 么 *   </pattern> 
+<template> 我决不能死得这么有勇气。    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 你 郁 闷 不 *   </pattern> 
+<template> 为什么要郁闷呢？    
+</template> 
+</category> 
+</aiml>

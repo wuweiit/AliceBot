@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category> 
+<pattern>今天天气挺好*</pattern> 
+<template>是吗？我这里下雨了。要是没下雨，我就出去玩了！
+</template> 
+</category>
+
+
+</aiml>

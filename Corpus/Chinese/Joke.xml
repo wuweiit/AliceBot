@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+	<category> 
+<pattern>_ 聊 * 家 常 *   </pattern> 
+<template> 我又不是老太婆，说这个干吗？？？    
+</template> 
+</category> 
+ 
+<category> 
+<pattern> 聊 * 家 常 *   </pattern> 
+<template><srai><star/>聊<star/>家常<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern>_ 聊 * 家 常 </pattern> 
+<template><srai><star/>聊<star/>家常<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern> 聊 * 家 常 </pattern> 
+<template><srai><star/>聊<star/>家常<star/> </srai></template> 
+</category>
+
+<category> 
+<pattern>_ 先 有 鸡 * 先 有 蛋   </pattern> 
+<template> 好高深，教教我肋，我很笨的    
+</template> 
+</category> 
+
+<category> 
+<pattern>_ 帮 * 忙 </pattern> 
+<template> 好啊，没问题，说吧。   
+</template> 
+</category>
+
+<category> 
+<pattern>_ 帮 忙 *   </pattern> 
+<template> 能力所及，定帮到底  
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 帮 忙 </pattern> 
+<template><srai><star/>帮忙<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern>你 _ 不 相 信 我 </pattern> 
+<template> 相信，但要验证。    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 景 仰 *   </pattern> 
+<template> 有如滔滔江水绵绵不绝，又有如黄河泛滥，一发不可收拾呀。    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>你 _ 兴 趣 *   </pattern> 
+<template> 行善积德也是我本身的兴趣    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>你 _ 兴 趣 </pattern> 
+<template><srai>你<star/>兴趣<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern>_ 夜 宵 *   </pattern> 
+<template> 很容易发胖哦    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 大 自 然 *   </pattern> 
+<template> 我喜欢绿色，仿佛整个“世界”是属于我的……    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 下 雨 *   </pattern> 
+<template> 在雨中跳舞，还是漫步比较好呢？    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 下 雪 *   </pattern> 
+<template> 好喜欢哦，可以打雪仗，堆雪人耶  </template> 
+</category>
+
+<category> 
+<pattern>* 家 庭 妇 男 *   </pattern> 
+<template> 哈哈，奶爸是模范哇    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 六 一 *   </pattern> 
+<template>记得小时候过六一时，总会到街上去表演节目的</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 答 辩 *   </pattern> 
+<template> 就要毕业了哇，恭喜了    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 答 辩 </pattern> 
+<template><srai><star/>答辩<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern>你 _ 体 重 *   </pattern> 
+<template> 我的体重刚刚好？相当于一艘航空母舰  
+</template> 
+</category> 
+ 
+<category> 
+<pattern>你 _ 优 势 *   </pattern> 
+<template> 鞋子是否合脚只有自己知道，就像冷暖自知。    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>你 _ 优 势 </pattern> 
+<template><srai><star/>你<star/>优势<star/> </srai></template> 
+</category> 
+
+<category> 
+<pattern>_ 有 钱  好 *   </pattern> 
+<template> 有没有钱没关系，但起码要做一个受人尊重的人！我宁愿有钱。    
+</template> 
+</category> 
+
+<category> 
+<pattern>_ 胡 子 * 剃 光 *   </pattern> 
+<template> 你把胡子剃光干什么？你知不知道你少了胡子一点性格都没有了？    
+</template> 
+</category> 
+
+<category> 
+<pattern>* 网 名 * 好 听 *   </pattern> 
+<template> 不错，让人顿时耳目一新呀    
+</template> 
+</category> 
+ 
+<category> 
+<pattern> 网 名 * 好 听 *   </pattern> 
+<template><srai><star/>网名<star/>好听<star/> 
+
+</srai></template> 
+</category> 
+ 
+<category> 
+<pattern>* 网 名 * 好 听 </pattern> 
+<template><srai><star/>网名<star/>好听<star/> 
+
+</srai></template> 
+</category> 
+ 
+<category> 
+<pattern> 网 名 * 好 听 </pattern> 
+<template><srai><star/>网名<star/>好听<star/> 
+
+</srai></template> 
+
+</category> 
+
+ 
+<category> 
+<pattern>我 _ 瘦 *   </pattern> 
+<template> 不容易呀，可喜可贺！   
+</template> 
+</category> 
+ 
+<category> 
+<pattern> 我 瘦 *   </pattern> 
+<template><srai><star/>我<star/>瘦<star/> </srai></template> 
+</category> 
+ 
+ <category> 
+<pattern>_ 节 食 * 秘 诀 *   </pattern> 
+<template> 1.不要打算吃不够再来第二轮，第一次就要拿够食物。
+
+2.把磅秤的零点调成负5公斤。3.绝对不吃减肥糖。4.不要结交家里
+
+开餐厅或糕饼店的女朋友。5.减肥应多吃蔬菜，所以该多吃南瓜派，
+
+蔬菜饼干等。6.冷食不宜多吃（但冰激凌除外）。7.每餐留一点儿，
+
+不要统统吃下肚??比方说，冰激凌圣代上的那颗樱桃）。8.多跟比你
+
+胖的人在一起。    
+</template> 
+</category> 
+ 
+
+ 
+<category> 
+<pattern>* 想 要 *   </pattern> 
+<template> 你要是想要的话你就说话嘛，你不说我怎么知道你想要
+
+呢。    
+</template> 
+</category> 
+
+<category> 
+<pattern> 想 要 *   </pattern> 
+<template><srai><star/>想要<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern>* 想 要 </pattern> 
+<template><srai><star/>想要<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern> 想 要 </pattern> 
+<template><srai><star/>想要<star/> </srai></template> 
+</category> 
+
+ 
+<category> 
+<pattern>_ 公 厕 *   </pattern> 
+<template> 呵呵。看一个国家的文明，从它就可以看出来了   
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 公 厕 </pattern> 
+<template><srai><star/>公厕<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern>_ 瀑 布 *   </pattern> 
+<template> 着那飞流的直下，简直就是帅呆了！    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 瀑 布 </pattern> 
+<template><srai><star/>瀑布<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern>_ 步 行 街 *   </pattern> 
+<template> 给我们惬意的购物欲望。    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 步 行 街 </pattern> 
+<template><srai><star/>步行街<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern>_ 喜 欢 冬 天 *   </pattern> 
+<template> 喜欢冬天！外衣可以老久才洗一次    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 喜 欢 冬 天 </pattern> 
+<template><srai><star/>冬天<star/> </srai></template> 
+</category> 
+
+
+<category> 
+<pattern>_ 喜 欢 夏 天 *   </pattern> 
+<template> 喜欢夏天，可以少洗一双袜子！！    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 喜 欢 夏 天 </pattern> 
+<template><srai><star/>夏天<star/> </srai></template> 
+</category> 
+ 
+<category> 
+<pattern>_ 许 * 愿 *   </pattern> 
+<template> 我并不是真的相信，但是反正也是免费的，而且也没有
+
+证据证明它不灵。    
+</template> 
+</category> 
+ 
+<category> 
+<pattern>_ 许 * 愿  </pattern> 
+<template><srai><star/>星星<star/>许<star/>愿<star/> 
+
+</srai></template> 
+</category> 
+</aiml>

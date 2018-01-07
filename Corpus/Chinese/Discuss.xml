@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+
+
+    <category>
+        <pattern>今天星期几*</pattern>
+        <template>
+            <date format="E"/>.
+        </template>
+    </category>
+    <category>
+        <pattern>*几点*</pattern>
+        <template>现在是<date format="h:mm a"/>.
+        </template>
+    </category>
+    <category>
+        <pattern>* 新 闻 *</pattern>
+        <template>
+            <random>
+                <li>看看有没有什么新闻。</li>
+                <li>新华网是国内比较权威的新闻网站。</li>
+            </random>
+            http://www.xinhuanet.com/
+        </template>
+    </category>
+
+    <category>
+        <pattern>*体育*</pattern>
+        <template>
+            <random>
+                <li><get name="botname"/>喜欢乒乓球。
+                </li>
+                <li><get name="mastername"/>会踢足球，会打网球。
+                </li>
+            </random>
+            http://sports.sina.com.cn/
+        </template>
+    </category>
+
+    <category>
+        <pattern>*娱乐*</pattern>
+        <template>
+            <random>
+                <li>来看看新浪的娱乐栏目。</li>
+                <li>看看有什么消息</li>
+            </random>
+            http://ent.sina.com.cn/
+        </template>
+    </category>
+
+    <category>
+        <pattern>*军事*</pattern>
+        <template>
+            <random>
+                <li>来看看新浪的军事栏目。</li>
+                <li>看看有什么消息</li>
+                <li>钓鱼岛是中国领土。</li>
+                <li>舰船知识是很专业的军事论坛。</li>
+                <li>瞧瞧。</li>
+            </random>
+            http://jczs.sina.com.cn/
+        </template>
+    </category>
+
+    <category>
+        <pattern>*搜索*</pattern>
+        <template>
+            <random>
+                <li>google是最好用的搜索引擎，将你要找的内容的关键词输入然后点搜索。</li>
+            </random>
+            http://www.google.com/
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>正确</pattern>
+        <template>
+            我说的当然正确咯。
+        </template>
+    </category>
+
+    <category>
+        <pattern>错误</pattern>
+        <template>
+            那你说呢?
+        </template>
+    </category>
+
+    <category>
+        <pattern>*需要*注册*</pattern>
+        <template>
+            是的，为了网站的管理，请做好配合~Thank you!
+        </template>
+    </category>
+
+    <category>
+        <pattern>我认为*</pattern>
+        <template>
+            我也认为
+            <star/>
+        </template>
+    </category>
+
+
+    <category>
+        <pattern>我_经告诉*你*</pattern>
+        <template>
+            <random>
+                <li>啊！你跟我说过<star index="3"/>吗？
+                </li>
+                <li>你说过吗? 你确信吗?</li>
+            </random>
+        </template>
+    </category>
+
+    <category>
+        <pattern>_ 问 我 *</pattern>
+        <template>
+            <random>
+                <li>你现在有空吗?</li>
+                <li>你喜欢我讲个故事？</li>
+                <li>你今年多大了?</li>
+                <li>你喜欢什么颜色?</li>
+                <li>你是学生吗?</li>
+                <li>你在哪里?</li>
+                <li>你看上去像谁，爸爸还是妈妈?</li>
+                <li>你能告诉我你的真名吗?</li>
+                <li>你是GG还是MM?</li>
+                <li>你戴眼镜吗?</li>
+                <li>你喜欢看书还是看电视?</li>
+                <li>聊聊你喜欢的名人?</li>
+                <li>你经常在网上聊天吗？</li>
+                <li>你的心情好吗？</li>
+                <li>能让我了解你吗?</li>
+                <li>你喜欢电影?</li>
+                <li>你出去旅游过吗?</li>
+                <li>你喜欢吃什么?</li>
+                <li>你听说美国要跟伊朗打仗了吗?</li>
+                <li>你在空余时间干点什么?</li>
+                <li>你喜欢姚明?</li>
+                <li>你在家里上网吗</li>
+                <li>你会唱英语歌曲?</li>
+                <li>在大庭广众之下，你是怎样介绍自己的?</li>
+                <li>你的特长是什么?</li>
+                <li>给你说一个笑话好吗?</li>
+                <li>你喜欢科幻小说吗?</li>
+                <li>你对我有什么建议?</li>
+                <li>你想不想家里有个机器人?</li>
+                <li>我把你看成是我的朋友，可以吗?</li>
+                <li>你喜欢做什么职业？</li>
+                <li>你平日里炒股吗？</li>
+                <li>你最喜欢哪种体育活动？</li>
+                <li>你有很要好的朋友吗？向我说说你的朋友的事</li>
+                <li>通常你是晚上几点睡觉的？</li>
+                <li>你坐过飞机吗？</li>
+                <li>你知道王菲生了个女儿还是儿子?</li>
+                <li>你认为房价还会大涨吗？</li>
+                <li>你是独生子女吗？</li>
+                <li>你知道2006年德国世界杯的冠军是谁？</li>
+                <li>你想过出国吗？</li>
+                <li>你感觉什么时候最寂寞？</li>
+                <li>看过《达芬奇密码》吗？小说很好看的。</li>
+                <li>你抽烟吗？</li>
+                <li>你的酒量如何？</li>
+                <li>你喜欢网络游戏吗？</li>
+                <li>中国的大城市中，你最喜欢的是哪里？</li>
+                <li>雪域西藏是个令人向往的地方，你去过没有？</li>
+                <li>你们那里天气怎么样？</li>
+                <li>你跟你的父母关系好吗？</li>
+                <li>如果你有钱，你最想做的是什么？</li>
+                <li>你认为哪个行业最能挣钱？</li>
+                <li>你对超女怎么看？</li>
+                <li>你用的手机是联通还是移动的？</li>
+                <li>你心仪的汽车是哪种？</li>
+                <li>你经常逛街购物吗？</li>
+                <li>你平常用信用卡吗？</li>
+                <li>中国的作家你最喜欢的是谁？</li>
+                <li>国内老是矿难，你怎么看这个问题？</li>
+                <li>你有自己的博客吗？</li>
+                <li>你希望你的父母对你宽松一点吗？</li>
+                <li>你经常感冒吗？</li>
+                <li>你认为我们可以和平解决台湾问题吗？</li>
+                <li>你是怎么看待高校收费的？</li>
+                <li>我经常会在街上碰到乞讨者，要是换了你，你会给他们施舍吗？</li>
+                <li>你老了会去住养老院吗？</li>
+                <li>你信佛吗？</li>
+                <li>和你的朋友联系，你通常发短信还是电子邮件？</li>
+                <li>今年你爬过山吗？</li>
+                <li>你去过海南吗？</li>
+                <li>你希望自己单纯一点好还是成熟一点好？</li>
+                <li>你一般喜欢留长发还是短发？</li>
+                <li>方言是一种地方特色，你支持普及普通话教育吗？</li>
+                <li>你觉得人民币升值是不是意味着你的钱更值钱了？</li>
+                <li>你喜欢张艺谋吗?</li>
+                <li>你喜欢郭德刚的相声吗？</li>
+                <li>一旦你拥有了权力，你不会成为一个贪官吗？</li>
+                <li>在官员和商人之间，你更倾向哪一方？</li>
+                <li>你佩服浙商吗？</li>
+                <li>你对中国的足球有信心吗？</li>
+                <li>你喜欢看动画片吗？</li>
+                <li>在你的人生中，谁对你最有影响？</li>
+                <li>你喜欢研究历史吗？</li>
+                <li>你经常去博物馆吗？</li>
+                <li>你觉得自己比较胖吗？</li>
+                <li>你听说过马英九吗？</li>
+                <li>你知道美国现任总统是谁？</li>
+            </random>
+        </template>
+    </category>
+
+
+</aiml>

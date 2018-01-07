@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+<category> 
+	<pattern>*梦想*</pattern> 
+	<template> 
+		做人没有梦想，那和咸鱼有什么区别啊？ 
+	</template> 
+</category>
+<category> 
+	<pattern>*品位*</pattern> 
+	<template> 
+		品位太差了吧？我靠！I服了You！ 
+	</template> 
+</category>
+</aiml>
