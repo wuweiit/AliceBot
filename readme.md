@@ -8,7 +8,7 @@ AliceBot是一款Java版的AIML1.0实现
 # 使用
 
 
-将数据库导入到sqlserver中，并在Alice项目根目录中修改robot.properties里面的数据库配置信息。
+将数据库sql导入到MySQL中，并在Alice项目根目录中修改robot.properties里面的数据库配置信息。
 
 关于程序在eclipse控制台的运行：
 1.其主函数入口在com.context包中的，Robot.java类中
