@@ -1,11 +1,10 @@
 package com.aiml;
 
-import java.io.IOException;
-import java.nio.file.Paths;
-
+import com.background.DBOperation;
+import com.customexception.AppException;
+import com.util.Util;
 import org.apache.lucene.analysis.cn.smart.SmartChineseAnalyzer;
 import org.apache.lucene.analysis.miscellaneous.PerFieldAnalyzerWrapper;
-import org.apache.lucene.analysis.standard.StandardAnalyzer;
 import org.apache.lucene.index.*;
 import org.apache.lucene.index.IndexWriterConfig.OpenMode;
 import org.apache.lucene.search.IndexSearcher;
@@ -13,9 +12,8 @@ import org.apache.lucene.store.Directory;
 import org.apache.lucene.store.FSDirectory;
 import org.apache.lucene.store.LockObtainFailedException;
 
-import com.background.DBOperation;
-import com.customexception.AppException;
-import com.util.Util;
+import java.io.IOException;
+import java.nio.file.Paths;
 
 public class IndexResource {
 	public DBOperation dbObject = null;
@@ -29,12 +27,48 @@ public class IndexResource {
 		init();
 	}
 
+    /**
+     * 初始化
+     */
 	private void init() {
 		dbObject = DBOperation.getInstance();
 		dbObject.linkDataBase();
+        buildIndex();
 		indexReader = buildIndexReader();
 		indexSearcher = buildIndexSearcher(indexReader);
 	}
+
+
+    /**
+     * 构建索引
+     */
+    public void buildIndex() {
+        try {
+
+            Directory directory = FSDirectory.open(Paths.get(Util.INDEXFILE_PATH) );
+
+
+            PerFieldAnalyzerWrapper wrapper = new PerFieldAnalyzerWrapper(new SmartChineseAnalyzer());
+            //开始索引
+            IndexWriterConfig indexConfig = new IndexWriterConfig(wrapper);
+
+            indexWriter = new IndexWriter(directory,
+                    indexConfig);
+
+            indexWriter.commit();
+            indexWriter.close();
+
+        } catch (CorruptIndexException e) {
+            throw new AppException(e);
+        } catch (LockObtainFailedException e) {
+            throw new AppException(e);
+        } catch (IOException e) {
+            throw new AppException("[ExceptionInfo]在创建IndexWriter的时候出现了IO错误。",
+                    e);
+        }
+    }
+
+
 
 	public IndexWriter getIndexWriterByMode(OpenMode openMode) {
 		try {
@@ -63,11 +97,16 @@ public class IndexResource {
 		return indexWriter;
 	}
 
+
+
 	public IndexReader buildIndexReader() {
 		IndexReader reader = null;
 		try {
 
             Directory directory = FSDirectory.open(Paths.get(Util.INDEXFILE_PATH) );
+
+
+
             DirectoryReader ireader = DirectoryReader.open(directory);
 
 			reader = ireader;
